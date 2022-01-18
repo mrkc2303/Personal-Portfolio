@@ -1,0 +1,35 @@
+html {
+	font-family:"Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.first-name, .last-name {
+	font-size: 1.5rem;
+	font-weight: 900;
+	letter-spacing: 3px;
+}
+
+.header .last-name {
+	margin-right: 50px;
+}
+
+.header ul {
+	display: flex;
+}
+
+.header li {
+	margin-right: 30px;
+}
