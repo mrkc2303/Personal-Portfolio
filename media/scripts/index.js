@@ -4,11 +4,15 @@ var lightBtn = document.querySelector(".light_mode");
 darkBtn.addEventListener("click", function() {
 	lightBtn.classList.remove("hide");
 	darkBtn.classList.add("hide");
+	// Changing the theme
+	document.documentElement.setAttribute('data-theme', 'dark');
 });
 
 lightBtn.addEventListener("click", function() {
 	darkBtn.classList.remove("hide");
 	lightBtn.classList.add("hide");
+	// Changing the theme
+	document.documentElement.setAttribute('data-theme', 'light');
 });
 
 var homeBtn = document.querySelector(".home");
