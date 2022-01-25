@@ -18,22 +18,6 @@
 	font-family:'Poppins', sans-serif;
 }
 
-/*.light-theme {
-	--backgroundClr: #FBFBFE;
-	--primaryText: #242329;
-	--secondaryText: #6D6A7C;
-	--btns: #6E57E0;
-	--selectText: #6E57E0;
-}
-
-.dark-theme {
-	--backgroundClrDark: #191627;
-	--primaryTextDark: #F2F1F3;
-	--secondaryTextDark: #A19DAD;
-	--btns: #6E57E0;
-	--selectText: #6E57E0;
-}*/
-
 li {
 	list-style: none; 
 	font-weight: 500;
