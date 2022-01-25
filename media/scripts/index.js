@@ -6,6 +6,7 @@ darkBtn.addEventListener("click", function() {
 	darkBtn.classList.add("hide");
 	// Changing the theme
 	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
 });
 
 lightBtn.addEventListener("click", function() {
@@ -13,7 +14,23 @@ lightBtn.addEventListener("click", function() {
 	lightBtn.classList.add("hide");
 	// Changing the theme
 	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
 });
+
+// CODE STARTED FOR CHECKING PREFERENCES SAVED TO LOCAL STORAGE
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        lightBtn.classList.remove("hide");
+		darkBtn.classList.add("hide");
+    }
+}
+
+// CODE ENDED FOR CHECKING PREFERENCES SAVED TO LOCAL STORAGE
 
 var homeBtn = document.querySelector(".home");
 var aboutBtn = document.querySelector(".about");
