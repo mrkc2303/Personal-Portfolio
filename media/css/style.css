@@ -1,5 +1,14 @@
-html {
-	font-family:"Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+:root {
+	--backgroundClr: #fbfbfe;
+	--primaryText: #242329;
+	--secondaryText: #6D6A7C;
+	--btns: #6E57E0;
+
+	font-family:'Poppins', sans-serif;
+}
+
+.dark_mode {
+
 }
 
 li {
@@ -10,10 +19,21 @@ a {
 	text-decoration: none;
 }
 
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	max-width: 85%;
+}
+
+.header a {
+	color: var(--primaryText);
 }
 
 .first-name, .last-name {
@@ -22,14 +42,43 @@ a {
 	letter-spacing: 3px;
 }
 
+.first-name:hover {
+	animation-name: text-change1;
+  	animation-duration: 1s;
+  	animation-timing-function: ease;
+  	animation-timing-function: ease;
+}
+
+.last-name:hover {
+	animation-name: text-change2;
+  	animation-duration: 1s;
+  	animation-timing-function: ease;
+  	animation-timing-function: ease;
+}
+
+.first-name {
+	color: var(--btns);
+}
+
 .header .last-name {
-	margin-right: 50px;
+	margin-right: 150px;
 }
 
 .header ul {
 	display: flex;
+	font-size: 14px;
 }
 
 .header li {
 	margin-right: 30px;
+}
+
+@keyframes text-change1 {
+  from {color: var(--btns);}
+  to {color: var(--primaryText);}
+}
+
+@keyframes text-change2 {
+  from {color: var(--primaryText);}
+  to {color: var(--btns);}
 }
