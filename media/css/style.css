@@ -30,6 +30,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	max-width: 85%;
+	user-select: none;
 }
 
 .header a {
@@ -46,13 +47,11 @@ body {
 	animation-name: text-change1;
   	animation-duration: 1s;
   	animation-timing-function: ease;
-  	animation-timing-function: ease;
 }
 
 .last-name:hover {
 	animation-name: text-change2;
   	animation-duration: 1s;
-  	animation-timing-function: ease;
   	animation-timing-function: ease;
 }
 
@@ -71,6 +70,19 @@ body {
 
 .header li {
 	margin-right: 30px;
+}
+
+.header .material-icons-outlined {
+	font-size: 20px;
+	color: var(--primaryText);
+	cursor: pointer;
+	user-select: none;
+}
+
+.hide {
+	display: none;
+	visibility: hidden;
+	width: 0px;
 }
 
 @keyframes text-change1 {
