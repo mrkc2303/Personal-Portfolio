@@ -37,6 +37,10 @@ body {
 	color: var(--primaryText);
 }
 
+.home:hover, .about:hover, .skills:hover, .qualifications:hover, .certificates:hover, .projects:hover, .contactme:hover {
+	color: var(--selectText);
+}
+
 
 .first-name, .last-name {
 	font-size: 1.5rem;
