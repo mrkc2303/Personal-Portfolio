@@ -1,18 +1,16 @@
 :root {
-	--backgroundClr: #fbfbfe;
+	--backgroundClr: #FBFBFE;
 	--primaryText: #242329;
 	--secondaryText: #6D6A7C;
 	--btns: #6E57E0;
+	--selectText: #6E57E0;
 
 	font-family:'Poppins', sans-serif;
 }
 
-.dark_mode {
-
-}
-
 li {
-	list-style: none;
+	list-style: none; 
+	font-weight: 500;
 }
 
 a {
@@ -26,6 +24,8 @@ body {
 }
 
 .header {
+	position: fixed;
+	top: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -33,14 +33,23 @@ body {
 	user-select: none;
 }
 
-.header a {
+.home, .about, .skills, .qualifications, .certificates, .projects, .contactme {
 	color: var(--primaryText);
 }
+
 
 .first-name, .last-name {
 	font-size: 1.5rem;
 	font-weight: 900;
 	letter-spacing: 3px;
+}
+
+.first-name {
+	color: var(--btns);
+}
+
+.last-name {
+	color: var(--primaryText);
 }
 
 .first-name:hover {
@@ -53,10 +62,6 @@ body {
 	animation-name: text-change2;
   	animation-duration: 1s;
   	animation-timing-function: ease;
-}
-
-.first-name {
-	color: var(--btns);
 }
 
 .header .last-name {
@@ -83,6 +88,10 @@ body {
 	display: none;
 	visibility: hidden;
 	width: 0px;
+}
+
+.selected {
+	color: var(--selectText);
 }
 
 @keyframes text-change1 {
