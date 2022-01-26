@@ -1,3 +1,5 @@
+import Typed from 'typed.js';
+
 var darkBtn = document.querySelector(".dark_mode");
 var lightBtn = document.querySelector(".light_mode");
 
@@ -77,3 +79,13 @@ contactMeBtn.addEventListener("click", function() {
 	contactMeBtn.classList.add("selected");
 	currSelected = contactMeBtn;
 });
+
+var typed = new Typed('.typing', {
+	strings: ['an Android Developer.', 'a Web Developer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Bibliophile.'],
+  	smartBackspace: true,
+  	startDelay: 1000,
+  	typeSpeed: 130,
+  	backDelay: 1000,
+  	backSpeed: 60,
+  	loop: true,
+  });

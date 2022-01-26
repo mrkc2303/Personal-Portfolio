@@ -27,6 +27,10 @@ a {
 	text-decoration: none;
 }
 
+h1 {
+	font-size: 2.5rem;
+}
+
 body {
 	display: flex;
 	align-items: center;
@@ -115,3 +119,11 @@ body {
   from {color: var(--primaryText);}
   to {color: var(--btns);}
 }
+
+#home {
+	display: flex;
+	flex-direction: row;
+	padding-top: 10%;
+	color: var(--primaryText);
+}
+
