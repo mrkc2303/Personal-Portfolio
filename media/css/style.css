@@ -1,3 +1,5 @@
+/**********ROOT ELEMENTS**********/
+
 :root {
 	--backgroundClr: #FBFBFE;
 	--primaryText: #242329;
@@ -18,6 +20,11 @@
 	font-family:'Poppins', sans-serif;
 }
 
+/**********SCROLLBAR**********/
+
+
+/**********ELEMENTS**********/
+
 li {
 	list-style: none; 
 	font-weight: 500;
@@ -27,8 +34,13 @@ a {
 	text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
 h1 {
 	font-size: 2.5rem;
+	margin: 0;
 }
 
 body {
@@ -37,6 +49,8 @@ body {
 	justify-content: center;
 	background-color: var(--backgroundClr);
 }
+
+/**********HEADER**********/
 
 .header {
 	position: fixed;
@@ -120,6 +134,8 @@ body {
   to {color: var(--btns);}
 }
 
+/**********HOME**********/
+
 #home {
 	display: flex;
 	flex-direction: row;
@@ -127,3 +143,6 @@ body {
 	color: var(--primaryText);
 }
 
+.typing-effect {
+	color: var(--secondaryText);
+}
