@@ -103,6 +103,11 @@ body {
 	background-color: var(--backgroundClr);
 }
 
+svg {
+	height: 500px;
+	width: 500px;
+}
+
 /**********HEADER**********/
 
 .header {

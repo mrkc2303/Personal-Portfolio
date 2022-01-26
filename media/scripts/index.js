@@ -1,6 +1,8 @@
 var darkBtn = document.querySelector(".dark_mode");
 var lightBtn = document.querySelector(".light_mode");
 
+//Dark Theme Switch
+
 darkBtn.addEventListener("click", function() {
 	lightBtn.classList.remove("hide");
 	darkBtn.classList.add("hide");
@@ -8,6 +10,8 @@ darkBtn.addEventListener("click", function() {
 	document.documentElement.setAttribute('data-theme', 'dark');
 	localStorage.setItem('theme', 'dark');
 });
+
+//Light Theme Switch
 
 lightBtn.addEventListener("click", function() {
 	darkBtn.classList.remove("hide");
