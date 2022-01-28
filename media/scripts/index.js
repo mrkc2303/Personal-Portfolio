@@ -92,7 +92,11 @@ var typed = new Typed('.type', {
   	loop: true,
   });
 
-//SCROLL SECTIONS
+
+
+
+
+//SCROLL SECTIONS (TODO)
 
 // const sections = document.querySelectorAll(".section");
 // console.log(sections); 
