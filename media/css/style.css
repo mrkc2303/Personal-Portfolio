@@ -6,6 +6,8 @@
 	--secondaryText: #6D6A7C;
 	--btns: #6E57E0;
 	--selectText: #6E57E0;
+	--primaryWhite: #FFFFFF;
+	--btnHover: #5A43CB;
 
 	font-family:'Poppins', sans-serif;
 }
@@ -16,6 +18,8 @@
 	--secondaryText: #A19DAD;
 	--btns: #6E57E0;
 	--selectText: #6E57E0;
+	--primaryWhite: #FFFFFF;
+	--btnHover: #5A43CB;
 
 	font-family:'Poppins', sans-serif;
 }
@@ -106,6 +110,19 @@ body {
   	padding: 0;
 }
 
+/**********GENERAL**********/
+
+.button {
+	color: var(--primaryWhite);
+	padding: 16px;
+	background-color: var(--btns);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	border-radius: 0.5rem;
+}
+
 
 /**********HEADER**********/
 
@@ -189,10 +206,12 @@ body {
 	align-items: center;
 	padding-top: 6%;
 	color: var(--primaryText);
+	max-width: 50%;
 }
 
 .typing-effect {
 	color: var(--secondaryText);
+	margin-bottom: 15px;
 }
 
 .homeBlob {
@@ -204,8 +223,26 @@ body {
  animation: doBlob 7s linear  infinite;
 }
 
+.written {
+	margin-bottom: 3em;
+}
+
 .home-content {
-	margin-left: 50px;
+	margin-left: 3em;
+}
+
+.homeIntro {
+	color: var(--secondaryText);
+}
+
+.button .material-icons-outlined {
+	color: var(--primaryWhite);
+	margin-left: 0.8rem;
+}
+
+.social {
+	display: flex;
+	flex-direction: column;
 }
 
 
