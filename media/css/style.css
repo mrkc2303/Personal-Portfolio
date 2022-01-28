@@ -101,12 +101,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--backgroundClr);
+	scroll-behavior: smooth;
+	margin: 0;
+  	padding: 0;
 }
 
-svg {
-	height: 500px;
-	width: 500px;
-}
 
 /**********HEADER**********/
 
@@ -182,6 +181,36 @@ svg {
 	color: var(--selectText);
 }
 
+/**********HOME**********/
+
+#home {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 6%;
+	color: var(--primaryText);
+}
+
+.typing-effect {
+	color: var(--secondaryText);
+}
+
+.homeBlob {
+	height: 40vh;
+	width: 40vh;
+}
+
+.homeBlob path {
+ animation: doBlob 7s linear  infinite;
+}
+
+.home-content {
+	margin-left: 50px;
+}
+
+
+/**********KEYFRAMES**********/
+
 @keyframes text-change1 {
   from {color: var(--btns);}
   to {color: var(--primaryText);}
@@ -192,15 +221,15 @@ svg {
   to {color: var(--btns);}
 }
 
-/**********HOME**********/
-
-#home {
-	display: flex;
-	flex-direction: row;
-	padding-top: 10%;
-	color: var(--primaryText);
-}
-
-.typing-effect {
-	color: var(--secondaryText);
+@keyframes doBlob {
+  0% {    d:path("M433.5,300Q424,350,387.5,387.5Q351,425,300.5,445.5Q250,466,198,448.5Q146,431,105,394Q64,357,41.5,303.5Q19,250,35.5,193Q52,136,104.5,112.5Q157,89,203.5,80.5Q250,72,308,61Q366,50,395.5,99.5Q425,149,434,199.5Q443,250,433.5,300Z");
+  }
+  25% {   d:path("M432,299Q420,348,384.5,385Q349,422,299.5,427.5Q250,433,204,421.5Q158,410,105.5,387Q53,364,41,307Q29,250,61.5,205Q94,160,123.5,121.5Q153,83,201.5,69Q250,55,302,62.5Q354,70,398,104.5Q442,139,443,194.5Q444,250,432,299Z");
+  }
+  50% {    d:path("M431.5,294Q402,338,387,399.5Q372,461,311,477Q250,493,199.5,459Q149,425,100.5,394.5Q52,364,38.5,307Q25,250,37.5,192.5Q50,135,98.5,103.5Q147,72,198.5,48.5Q250,25,304,44Q358,63,387.5,108.5Q417,154,439,202Q461,250,431.5,294Z");
+  }
+  75% {    d:path("M421,298.5Q417,347,386,389Q355,431,302.5,433Q250,435,195.5,436.5Q141,438,116,390Q91,342,66.5,296Q42,250,57,198.5Q72,147,101,95Q130,43,190,30Q250,17,299.5,47.5Q349,78,391.5,111Q434,144,429.5,197Q425,250,421,298.5Z");
+  }
+  100% {    d:path("M433.5,300Q424,350,387.5,387.5Q351,425,300.5,445.5Q250,466,198,448.5Q146,431,105,394Q64,357,41.5,303.5Q19,250,35.5,193Q52,136,104.5,112.5Q157,89,203.5,80.5Q250,72,308,61Q366,50,395.5,99.5Q425,149,434,199.5Q443,250,433.5,300Z");
+  }
 }
