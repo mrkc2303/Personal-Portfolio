@@ -91,3 +91,28 @@ var typed = new Typed('.type', {
   	backSpeed: 40,
   	loop: true,
   });
+
+//SCROLL SECTIONS
+
+// const sections = document.querySelectorAll(".section");
+// console.log(sections); 
+
+// window.addEventListener("scroll", function() {
+// 	const scrollY = window.pageYOffset;
+
+// 	  sections.forEach((current) => {
+// 	    const sectionHeight = current.offsetHeight;
+// 	    const sectionTop = current.offsetTop - 50;
+// 	    let sectionId = current.getAttribute("id");
+
+// 	    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+// 	      document
+// 	        .querySelector(".menu a[href*=" + sectionId + "]")
+// 	        .classList.add("selected");
+// 	    } else {
+// 	      document+
+// 	        .querySelector(".menu a[href*=" + sectionId + "]")
+// 	        .classList.remove("selected");
+// 	    }
+// 	});
+// });
