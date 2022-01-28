@@ -123,6 +123,13 @@ body {
 	border-radius: 0.5rem;
 }
 
+.button:hover {
+	background-color: var(--btnHover);
+}
+
+.iconify {
+	color: var(--btns);
+}
 
 /**********HEADER**********/
 
@@ -204,9 +211,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding-top: 6%;
+	margin-top: 9%;
 	color: var(--primaryText);
-	max-width: 50%;
+	max-width: 55%;
+
 }
 
 .typing-effect {
@@ -215,12 +223,12 @@ body {
 }
 
 .homeBlob {
-	height: 40vh;
-	width: 40vh;
+	height: 20em;
+	width: 20em;
 }
 
 .homeBlob path {
- animation: doBlob 7s linear  infinite;
+	animation: doBlob 7s linear  infinite;
 }
 
 .written {
@@ -228,7 +236,7 @@ body {
 }
 
 .home-content {
-	margin-left: 3em;
+	margin-left: 5em;
 }
 
 .homeIntro {
@@ -243,6 +251,14 @@ body {
 .social {
 	display: flex;
 	flex-direction: column;
+	height: 12em;
+	justify-content: space-between;
+	margin-left: 5em;
+}
+
+.social-icon {
+	font-size: 1.5rem;
+	color: var(--btns);
 }
 
 
