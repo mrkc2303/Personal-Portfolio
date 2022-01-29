@@ -103,7 +103,8 @@ h1 {
 body {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	flex-direction: column;
 	background-color: var(--backgroundClr);
 	scroll-behavior: smooth;
 	margin: 0;
@@ -116,15 +117,26 @@ body {
 	color: var(--primaryWhite);
 	padding: 16px;
 	background-color: var(--btns);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: fit-content;
 	border-radius: 0.5rem;
 }
 
 .button:hover {
 	background-color: var(--btnHover);
+}
+
+.button-secondary {
+	color: var(--primaryText);
+	padding: 16px;
+	background-color: var(--backgroundClr);
+}
+
+.button-flex {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	gap: 0.5rem;
+
 }
 
 .iconify {
@@ -245,10 +257,9 @@ body {
 
 .button .material-icons-outlined {
 	color: var(--primaryWhite);
-	margin-left: 0.8rem;
 }
 
-.social {
+.social-home {
 	display: flex;
 	flex-direction: column;
 	height: 12em;
@@ -261,6 +272,23 @@ body {
 	color: var(--btns);
 }
 
+.scrollDown {
+	margin-top: 25%;
+	font-size: 0.9rem;
+	font-weight: 600;
+	transition: 0.3s;
+}
+
+.scrollDown .iconify {
+	height: 1.6rem;
+	width: 1.6rem;
+	margin: 0 0.8em 0 0.8em;
+}
+
+#iconify-sml {
+	height: 1em;
+	width: 1em;
+}
 
 /**********KEYFRAMES**********/
 
