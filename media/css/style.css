@@ -152,6 +152,10 @@ body {
 	color: var(--btns);
 }
 
+.section {
+	padding-top: 6%;
+}
+ 
 /**********HEADER**********/
 
 .header {
@@ -234,7 +238,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-top: 9%;
+	padding-top: 9%;
 	color: var(--primaryText);
 	max-width: 60%;
 
