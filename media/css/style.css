@@ -102,11 +102,19 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	color: var(--primaryText);
 }
 
 h1 {
 	font-size: 2.5rem;
-	margin: 0;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
 }
 
 body {
@@ -347,6 +355,21 @@ body {
 	top: 0;
 	left: 0;
 }*/
+
+/**********ABOUT ME**********/
+
+.intro {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.intro span {
+	margin-top: 5px;
+	font-size: 0.9rem;
+	color: var(--secondaryText);
+	font-weight: 500;
+}
 
 /**********BACK TO TOP**********/
 
