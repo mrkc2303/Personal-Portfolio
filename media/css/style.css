@@ -374,11 +374,11 @@ body {
 /**********BACK TO TOP**********/
 
 .back-to-top {
-	padding: 0.3rem 0.4rem 0 0.4rem;	
-	background-color: 20%;
+	padding: 0.3rem 0.4rem 0 0.4rem;
 	position: fixed;
 	bottom: 10%;
 	right: 3rem;
+	opacity: 0.8;
 }
 
 /**********KEYFRAMES**********/
