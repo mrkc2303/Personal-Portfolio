@@ -93,9 +93,6 @@ var typed = new Typed('.type', {
   });
 
 
-
-
-
 //SCROLL SECTIONS (TODO)
 
 // const sections = document.querySelectorAll(".section");
