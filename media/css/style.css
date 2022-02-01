@@ -168,7 +168,8 @@ body {
 }
 
 .section {
-	padding-top: 8%;
+	/*margin-top: 4%;*/
+	padding-top: 9%;
 }
 
 .fixed-social {
@@ -259,7 +260,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding-top: 9%;
 	color: var(--primaryText);
 	max-width: 60%;
 
