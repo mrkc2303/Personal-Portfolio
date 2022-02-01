@@ -95,25 +95,34 @@ var typed = new Typed('.type', {
 
 //SCROLL SECTIONS (TODO)
 
-// const sections = document.querySelectorAll(".section");
+const sections = document.querySelectorAll(".section");
 // console.log(sections); 
 
-// window.addEventListener("scroll", function() {
-// 	const scrollY = window.pageYOffset;
+window.addEventListener("scroll", function() {
+	const scrollY = window.pageYOffset;
 
-// 	  sections.forEach((current) => {
-// 	    const sectionHeight = current.offsetHeight;
-// 	    const sectionTop = current.offsetTop - 50;
-// 	    let sectionId = current.getAttribute("id");
+	sections.forEach((current) => {
+		const sectionHeight = current.offsetHeight;
+		const sectionTop = current.offsetTop;
+		let sectionId = current.getAttribute("id");
 
-// 	    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-// 	      document
-// 	        .querySelector(".menu a[href*=" + sectionId + "]")
-// 	        .classList.add("selected");
-// 	    } else {
-// 	      document+
-// 	        .querySelector(".menu a[href*=" + sectionId + "]")
-// 	        .classList.remove("selected");
-// 	    }
-// 	});
-// });
+		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+			if(sectionId != "home") {
+				document.querySelector(".social-home").classList.add("fixed-social");
+			} else {
+				document.querySelector(".social-home").classList.remove("fixed-social");
+			}
+		}
+
+		// if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+		//   document
+		//     .querySelector(".menu a[href*=" + sectionId + "]")
+		//     .classList.add("selected");
+		// } else {
+		//  document+
+		//     .querySelector(".menu a[href*=" + sectionId + "]")
+		//     .classList.remove("selected");
+		// }
+
+	});
+});

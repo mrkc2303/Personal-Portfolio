@@ -170,6 +170,12 @@ body {
 .section {
 	padding-top: 8%;
 }
+
+.fixed-social {
+	position: fixed;
+	bottom: 20%;
+	right: 3.5rem;
+}
  
 /**********HEADER**********/
 
