@@ -103,26 +103,19 @@ window.addEventListener("scroll", function() {
 
 	sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop;
+		const sectionTop = current.offsetTop-10;
 		let sectionId = current.getAttribute("id");
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected");
+			
 			if(sectionId != "home") {
 				document.querySelector(".social-home").classList.add("fixed-social");
 			} else {
 				document.querySelector(".social-home").classList.remove("fixed-social");
 			}
+		} else {
+			document.querySelector(".menu a[href*=" + sectionId + "]").classList.remove("selected");
 		}
-
-		// if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-		//   document
-		//     .querySelector(".menu a[href*=" + sectionId + "]")
-		//     .classList.add("selected");
-		// } else {
-		//  document+
-		//     .querySelector(".menu a[href*=" + sectionId + "]")
-		//     .classList.remove("selected");
-		// }
-
 	});
 });
