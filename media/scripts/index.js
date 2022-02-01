@@ -103,12 +103,12 @@ window.addEventListener("scroll", function() {
 
 	sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop-10;
+		const sectionTop = current.offsetTop-20;
 		let sectionId = current.getAttribute("id");
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
 			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected");
-			
+
 			if(sectionId != "home") {
 				document.querySelector(".social-home").classList.add("fixed-social");
 			} else {
