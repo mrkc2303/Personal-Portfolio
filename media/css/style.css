@@ -431,6 +431,12 @@ body {
 	bottom: 10%;
 	right: 3rem;
 	opacity: 0.8;
+	z-index: 10;
+  	transition: 0.4s;
+}
+
+.back-to-top-show {
+	bottom: 5rem;
 }
 
 /**********KEYFRAMES**********/
