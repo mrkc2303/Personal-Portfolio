@@ -107,20 +107,14 @@ window.addEventListener("scroll", function() {
 		let sectionId = current.getAttribute("id");
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected");
-
-			if(scrollY <= 300) {
-				document.querySelector(".back-to-top").classList.add("hide");
-			} else {
-				document.querySelector(".back-to-top").classList.remove("hide");
-			}
-
-			console.log(scrollY);
+			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected")
 
 			if(sectionId != "home") {
-				document.querySelector(".social-home").classList.add("fixed-social");
+				document.querySelector(".fixed-social").classList.add("fixed-social-show");
+				document.querySelector(".back-to-top").classList.add("back-to-top-show");
 			} else {
-				document.querySelector(".social-home").classList.remove("fixed-social");
+				document.querySelector(".fixed-social").classList.remove("fixed-social-show");
+				document.querySelector(".back-to-top").classList.remove("back-to-top-show");
 			}
 		} else {
 			document.querySelector(".menu a[href*=" + sectionId + "]").classList.remove("selected");

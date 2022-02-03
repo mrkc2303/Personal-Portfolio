@@ -175,9 +175,18 @@ body {
 .fixed-social {
 	position: fixed;
 	bottom: 30%;
-	right: 3.5rem;
+	right: -10%;
+	display: flex;
+	flex-direction: column;
+	height: 12em;
+	justify-content: space-between;
+	transition: 0.5s;
 }
- 
+
+.fixed-social-show{
+	right: 3.5rem;
+} 
+
 /**********HEADER**********/
 
 .header {
@@ -417,9 +426,9 @@ body {
 	width: 300px;
 	height: 350px;
 
-	background: linear-gradient(135deg, rgb(43, 34, 88) 0%, rgb(27, 6, 31) 80%);
-	background: -moz-linear-gradient(135deg, rgb(43, 34, 88) 0%, rgb(27, 6, 31) 80%);
-	background: -webkit-linear-gradient(135deg, rgb(43, 34, 88) 0%, rgb(27, 6, 31) 80%);
+	background: linear-gradient(135deg, RGB(38, 49, 114) 12%, RGB(255, 191, 180) 80%);
+	background: -moz-linear-gradient(135deg, RGB(38, 49, 114) 12%, RGB(255, 191, 180) 80%);
+	background: -webkit-linear-gradient(135deg, RGB(38, 49, 114) 12%, RGB(255, 191, 180) 80%);
 	border-radius: 0.6rem;
 }
 
@@ -428,11 +437,11 @@ body {
 .back-to-top {
 	padding: 0.3rem 0.4rem 0 0.4rem;
 	position: fixed;
-	bottom: 10%;
+	bottom: -20%;
 	right: 3rem;
 	opacity: 0.8;
 	z-index: 10;
-  	transition: 0.4s;
+  	transition: 0.5s;
 }
 
 .back-to-top-show {
