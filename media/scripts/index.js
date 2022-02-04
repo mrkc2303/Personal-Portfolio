@@ -36,13 +36,13 @@ if (currentTheme) {
 
 // CODE ENDED FOR CHECKING PREFERENCES SAVED TO LOCAL STORAGE
 
-var homeBtn = document.querySelector(".home");
-var aboutBtn = document.querySelector(".about");
-var skillsBtn = document.querySelector(".skills");
-var qualificationsBtn = document.querySelector(".qualifications");
-var certificatesBtn = document.querySelector(".certificates");
-var projectsBtn = document.querySelector(".projects");
-var contactMeBtn = document.querySelector(".contactme");
+const homeBtn = document.querySelector(".home");
+const aboutBtn = document.querySelector(".about");
+const skillsBtn = document.querySelector(".skills");
+const qualificationsBtn = document.querySelector(".qualifications");
+const certificatesBtn = document.querySelector(".certificates");
+const projectsBtn = document.querySelector(".projects");
+const contactMeBtn = document.querySelector(".contactme");
 
 var currSelected = homeBtn;
 
@@ -82,7 +82,7 @@ contactMeBtn.addEventListener("click", function() {
 	currSelected = contactMeBtn;
 });
 
-var typed = new Typed('.type', {
+const typed = new Typed('.type', {
 	strings: ['a Web Developer.', 'an Android Developer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
   	smartBackspace: true,
   	startDelay: 1000,
@@ -121,3 +121,53 @@ window.addEventListener("scroll", function() {
 		}
 	});
 });
+
+const languagesHead = document.querySelector(".languages");
+const libAndFrameHead = document.querySelector(".libAndFrame");
+const toolsHead = document.querySelector(".tools");
+const cardHead = document.querySelectorAll(".cardHead");
+const sectionContent = document.querySelectorAll(".section-content");
+var flipped = [false, false, false];
+
+languagesHead.addEventListener("click", function() {
+	if(flipped[0] == false) {
+		cardHead[0].classList.add("flip");
+		flipped[0] = true;
+		sectionContent[0].classList.add("section-show");
+		sectionContent[0].classList.remove("section-hide");
+	} else {
+		cardHead[0].classList.remove("flip");
+		flipped[0] = false;
+		sectionContent[0].classList.add("section-hide");
+		sectionContent[0].classList.remove("section-show");
+	}
+});
+
+libAndFrameHead.addEventListener("click", function() {
+	if(flipped[1] == false) {
+		cardHead[1].classList.add("flip");
+		flipped[1] = true;
+		sectionContent[1].classList.add("section-show");
+		sectionContent[1].classList.remove("section-hide");
+	} else {
+		cardHead[1].classList.remove("flip");
+		flipped[1] = false;
+		sectionContent[1].classList.add("section-hide");
+		sectionContent[1].classList.remove("section-show");
+	}
+});
+
+toolsHead.addEventListener("click", function() {
+	if(flipped[2] == false) {
+		cardHead[2].classList.add("flip");
+		flipped[2] = true;
+		sectionContent[2].classList.add("section-hide");
+		sectionContent[2].classList.remove("section-show");
+	} else {
+		cardHead[2].classList.remove("flip");
+		flipped[2] = false;
+		sectionContent[2].classList.add("section-hide");
+		sectionContent[2].classList.remove("section-show");
+	}
+});
+
