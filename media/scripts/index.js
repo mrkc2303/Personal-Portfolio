@@ -129,7 +129,8 @@ const cardHead = document.querySelectorAll(".cardHead");
 const sectionContent = document.querySelectorAll(".section-content");
 var flipped = [false, false, false];
 
-languagesHead.addEventListener("click", function() {
+
+cardHead[0].addEventListener("click", function() {
 	if(flipped[0] == false) {
 		cardHead[0].classList.add("flip");
 		flipped[0] = true;
@@ -143,7 +144,7 @@ languagesHead.addEventListener("click", function() {
 	}
 });
 
-libAndFrameHead.addEventListener("click", function() {
+cardHead[1].addEventListener("click", function() {
 	if(flipped[1] == false) {
 		cardHead[1].classList.add("flip");
 		flipped[1] = true;
@@ -157,12 +158,12 @@ libAndFrameHead.addEventListener("click", function() {
 	}
 });
 
-toolsHead.addEventListener("click", function() {
+cardHead[2].addEventListener("click", function() {
 	if(flipped[2] == false) {
 		cardHead[2].classList.add("flip");
 		flipped[2] = true;
-		sectionContent[2].classList.add("section-hide");
-		sectionContent[2].classList.remove("section-show");
+		sectionContent[2].classList.add("section-show");
+		sectionContent[2].classList.remove("section-hide");
 	} else {
 		cardHead[2].classList.remove("flip");
 		flipped[2] = false;
