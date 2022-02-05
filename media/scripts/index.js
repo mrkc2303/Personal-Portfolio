@@ -127,7 +127,7 @@ const libAndFrameHead = document.querySelector(".libAndFrame");
 const toolsHead = document.querySelector(".tools");
 const cardHead = document.querySelectorAll(".cardHead");
 const sectionContent = document.querySelectorAll(".section-content");
-var flipped = [false, false, false];
+var flipped = [false, false, false, false];
 
 
 cardHead[0].addEventListener("click", function() {
@@ -172,3 +172,16 @@ cardHead[2].addEventListener("click", function() {
 	}
 });
 
+cardHead[3].addEventListener("click", function() {
+	if(flipped[3] == false) {
+		cardHead[3].classList.add("flip");
+		flipped[3] = true;
+		sectionContent[3].classList.add("section-show");
+		sectionContent[3].classList.remove("section-hide");
+	} else {
+		cardHead[3].classList.remove("flip");
+		flipped[3] = false;
+		sectionContent[3].classList.add("section-hide");
+		sectionContent[3].classList.remove("section-show");
+	}
+});
