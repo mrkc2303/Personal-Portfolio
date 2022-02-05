@@ -476,8 +476,9 @@ body {
 	background-color: var(--secondaryBackgroundClr);
 	height: 500px;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .section-show {
@@ -501,7 +502,7 @@ body {
 }
 
 .specs-intro {
-	width: 50%;
+	width: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -513,8 +514,36 @@ body {
 	color: var(--btns);
 }
 
-.specs-progress {
+.specs-intro h4 {
+	margin-right: 15%;
+}
 
+.specs-progress {
+	margin: 0px;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.progress-bar {
+	height: 5px;
+	width: 100%;
+	border-radius: 20px;
+	background-color: var(--primaryText);
+}
+
+.progress-bar div {
+	height: 5px;
+	border-radius: 20px;
+	background-color: var(--btns);
+	z-index: 2;
+}
+
+.specs-progress span {
+	margin-left: 2rem;
+	color: var(--primaryText);
 }
 
 /**********BACK TO TOP**********/

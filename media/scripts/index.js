@@ -83,7 +83,7 @@ contactMeBtn.addEventListener("click", function() {
 });
 
 const typed = new Typed('.type', {
-	strings: ['a Web Developer.', 'an Android Developer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
+	strings: ['a Web Developer.', 'an Android Developer.', 'a C++ Programmer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
   	smartBackspace: true,
   	startDelay: 1000,
   	typeSpeed: 50,
