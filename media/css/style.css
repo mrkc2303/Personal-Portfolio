@@ -429,7 +429,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column: span 2;
-	grid-row-gap: 5rem;
+	grid-row-gap: 2rem;
 	grid-column-gap: 5rem;
 }
 
@@ -472,13 +472,16 @@ body {
 }
 
 .section-content {
-	padding: 2rem 0 2rem 0;
 	background-color: var(--secondaryBackgroundClr);
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	margin-top: 2rem;
+	max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.5s ease-out;
 }
 
 /*.section-show {

@@ -122,66 +122,19 @@ window.addEventListener("scroll", function() {
 	});
 });
 
-const languagesHead = document.querySelector(".languages");
-const libAndFrameHead = document.querySelector(".libAndFrame");
-const toolsHead = document.querySelector(".tools");
 const cardHead = document.querySelectorAll(".cardHead");
-const sectionContent = document.querySelectorAll(".section-content");
-var flipped = [false, false, false, false];
 
-
-cardHead[0].addEventListener("click", function() {
-	if(flipped[0] == false) {
-		cardHead[0].classList.add("flip");
-		flipped[0] = true;
-		sectionContent[0].classList.add("section-show");
-		sectionContent[0].classList.remove("section-hide");
-	} else {
-		cardHead[0].classList.remove("flip");
-		flipped[0] = false;
-		sectionContent[0].classList.add("section-hide");
-		sectionContent[0].classList.remove("section-show");
-	}
-});
-
-cardHead[1].addEventListener("click", function() {
-	if(flipped[1] == false) {
-		cardHead[1].classList.add("flip");
-		flipped[1] = true;
-		sectionContent[1].classList.add("section-show");
-		sectionContent[1].classList.remove("section-hide");
-	} else {
-		cardHead[1].classList.remove("flip");
-		flipped[1] = false;
-		sectionContent[1].classList.add("section-hide");
-		sectionContent[1].classList.remove("section-show");
-	}
-});
-
-cardHead[2].addEventListener("click", function() {
-	if(flipped[2] == false) {
-		cardHead[2].classList.add("flip");
-		flipped[2] = true;
-		sectionContent[2].classList.add("section-show");
-		sectionContent[2].classList.remove("section-hide");
-	} else {
-		cardHead[2].classList.remove("flip");
-		flipped[2] = false;
-		sectionContent[2].classList.add("section-hide");
-		sectionContent[2].classList.remove("section-show");
-	}
-});
-
-cardHead[3].addEventListener("click", function() {
-	if(flipped[3] == false) {
-		cardHead[3].classList.add("flip");
-		flipped[3] = true;
-		sectionContent[3].classList.add("section-show");
-		sectionContent[3].classList.remove("section-hide");
-	} else {
-		cardHead[3].classList.remove("flip");
-		flipped[3] = false;
-		sectionContent[3].classList.add("section-hide");
-		sectionContent[3].classList.remove("section-show");
-	}
-});
+for (var i = 0; i < cardHead.length; i++) {	
+	cardHead[i].addEventListener("click", function() {
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	      content.style.paddingBottom = 0 + "rem";
+	      this.classList.remove("flip");
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	      content.style.paddingBottom = 2 + "rem";
+	      this.classList.add("flip");
+	    } 
+	});
+}
