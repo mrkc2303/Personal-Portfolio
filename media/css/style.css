@@ -63,6 +63,7 @@ html::-webkit-scrollbar-thumb:hover {
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	user-select: none;
 	scrollbar-width: thin;
 	scrollbar-color: #6E57E0 #f1f1f1;
 }
@@ -186,7 +187,6 @@ body {
 	align-items: center;
 	justify-content: center;
 	max-width: 85%;
-	user-select: none;
 	background-color: var(--backgroundClr);
 	height: var(--headHeight);
 }
@@ -382,7 +382,7 @@ body {
 	font-size: 0.9rem;
 	color: var(--secondaryText);
 	font-weight: 500;
-	max-width: 150px;
+	width: fit-content;
 }
 
 .about-main {

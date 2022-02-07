@@ -126,6 +126,7 @@ const cardHead = document.querySelectorAll(".cardHead");
 
 for (var i = 0; i < cardHead.length; i++) {	
 	cardHead[i].addEventListener("click", function() {
+		console.log(this);
 		var content = this.nextElementSibling;
 		if (content.style.maxHeight){
 	      content.style.maxHeight = null;
