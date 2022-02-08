@@ -9,6 +9,7 @@
 	--selectText: #6E57E0;
 	--primaryWhite: #FFFFFF;
 	--btnHover: #5A43CB;
+	--footer: #6E57E0;
 
 	font-family:'Poppins', sans-serif;
 
@@ -28,6 +29,7 @@
 	--selectText: #6E57E0;
 	--primaryWhite: #FFFFFF;
 	--btnHover: #5A43CB;
+	--footer: #100E1B;
 
 	font-family:'Poppins', sans-serif;
 
@@ -564,6 +566,17 @@ body {
 .back-to-top-show {
 	bottom: 5rem;
 }
+
+
+/**********FOOTER**********/
+
+/*footer {
+	background-color: var(--footer);
+	height: 250px;
+	width: 100%;
+	margin-top:auto; 
+	color: var(--primaryWhite);
+}*/
 
 /**********KEYFRAMES**********/
 
