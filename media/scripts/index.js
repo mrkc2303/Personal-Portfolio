@@ -47,50 +47,13 @@ const headOption = document.querySelectorAll(".head-option");
 
 var currSelected = homeBtn;
 
-console.log(homeBtn);
-
-const headBtns = (this) => {
-	currSelected.classList.remove("selected");
-	this.classList.add("selected");
-	currSelected = this;
+for(var i=0; i < headOption.length; i++) {
+	headOption[i].addEventListener("click", function() {
+		currSelected.classList.remove("selected");
+		this.classList.add("selected");
+		currSelected = this;
+	});
 }
-
-// homeBtn.addEventListener("click", function() {
-// 	console.log(this);
-// 	currSelected.classList.remove("selected");
-// 	homeBtn.classList.add("selected");
-// 	currSelected = homeBtn;
-// });
-
-// aboutBtn.addEventListener("click", function() {
-// 	currSelected.classList.remove("selected");
-// 	aboutBtn.classList.add("selected");
-// 	currSelected = aboutBtn;
-// });
-
-// skillsBtn.addEventListener("click", function() {
-// 	currSelected.classList.remove("selected");
-// 	skillsBtn.classList.add("selected");
-// 	currSelected = skillsBtn;
-// });
-
-// qualificationsBtn.addEventListener("click", function() {
-// 	currSelected.classList.remove("selected");
-// 	qualificationsBtn.classList.add("selected");
-// 	currSelected = qualificationsBtn;
-// });
-
-// projectsBtn.addEventListener("click", function() {
-// 	currSelected.classList.remove("selected");
-// 	projectsBtn.classList.add("selected");
-// 	currSelected = projectsBtn;
-// });
-
-// contactMeBtn.addEventListener("click", function() {
-// 	currSelected.classList.remove("selected");
-// 	contactMeBtn.classList.add("selected");
-// 	currSelected = contactMeBtn;
-// });
 
 const typed = new Typed('.type', {
 	strings: ['a Web Developer.', 'an Android Developer.', 'a C++ Programmer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
