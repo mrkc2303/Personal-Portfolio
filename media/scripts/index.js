@@ -43,44 +43,54 @@ const qualificationsBtn = document.querySelector(".qualifications");
 const certificatesBtn = document.querySelector(".certificates");
 const projectsBtn = document.querySelector(".projects");
 const contactMeBtn = document.querySelector(".contactme");
+const headOption = document.querySelectorAll(".head-option");
 
 var currSelected = homeBtn;
 
-homeBtn.addEventListener("click", function() {
-	currSelected.classList.remove("selected");
-	homeBtn.classList.add("selected");
-	currSelected = homeBtn;
-});
+console.log(homeBtn);
 
-aboutBtn.addEventListener("click", function() {
+const headBtns = (this) => {
 	currSelected.classList.remove("selected");
-	aboutBtn.classList.add("selected");
-	currSelected = aboutBtn;
-});
+	this.classList.add("selected");
+	currSelected = this;
+}
 
-skillsBtn.addEventListener("click", function() {
-	currSelected.classList.remove("selected");
-	skillsBtn.classList.add("selected");
-	currSelected = skillsBtn;
-});
+// homeBtn.addEventListener("click", function() {
+// 	console.log(this);
+// 	currSelected.classList.remove("selected");
+// 	homeBtn.classList.add("selected");
+// 	currSelected = homeBtn;
+// });
 
-qualificationsBtn.addEventListener("click", function() {
-	currSelected.classList.remove("selected");
-	qualificationsBtn.classList.add("selected");
-	currSelected = qualificationsBtn;
-});
+// aboutBtn.addEventListener("click", function() {
+// 	currSelected.classList.remove("selected");
+// 	aboutBtn.classList.add("selected");
+// 	currSelected = aboutBtn;
+// });
 
-projectsBtn.addEventListener("click", function() {
-	currSelected.classList.remove("selected");
-	projectsBtn.classList.add("selected");
-	currSelected = projectsBtn;
-});
+// skillsBtn.addEventListener("click", function() {
+// 	currSelected.classList.remove("selected");
+// 	skillsBtn.classList.add("selected");
+// 	currSelected = skillsBtn;
+// });
 
-contactMeBtn.addEventListener("click", function() {
-	currSelected.classList.remove("selected");
-	contactMeBtn.classList.add("selected");
-	currSelected = contactMeBtn;
-});
+// qualificationsBtn.addEventListener("click", function() {
+// 	currSelected.classList.remove("selected");
+// 	qualificationsBtn.classList.add("selected");
+// 	currSelected = qualificationsBtn;
+// });
+
+// projectsBtn.addEventListener("click", function() {
+// 	currSelected.classList.remove("selected");
+// 	projectsBtn.classList.add("selected");
+// 	currSelected = projectsBtn;
+// });
+
+// contactMeBtn.addEventListener("click", function() {
+// 	currSelected.classList.remove("selected");
+// 	contactMeBtn.classList.add("selected");
+// 	currSelected = contactMeBtn;
+// });
 
 const typed = new Typed('.type', {
 	strings: ['a Web Developer.', 'an Android Developer.', 'a C++ Programmer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
@@ -139,3 +149,40 @@ for (var i = 0; i < cardHead.length; i++) {
 	    } 
 	});
 }
+
+
+const form = document.getElementById("contact-form");
+
+async function handleSubmit(event) {
+	event.preventDefault();
+	var message = document.getElementById("message");
+	var data = new FormData(event.target);
+	fetch(event.target.action, {
+	    method: form.method,
+	    body: data,
+	    headers: {
+	      Accept: "application/json",
+	    },
+    })
+
+    .then((response) => {
+	    message.innerHTML = "Your message has been sent.";
+	    document.querySelector(".msg_style").style.display = "block";
+
+	    setTimeout(function () {
+	      document.querySelector(".msg_style").style.display = "none";
+	    }, 4000);
+	    form.reset();
+    })
+    .catch((error) => {
+        message.innerHTML =
+          "Oops! There was a problem delivering your message, please contact via other means.";
+        document.querySelector(".msg_style").style.display = "block";
+
+        setTimeout(function () {
+          document.querySelector(".msg_style").style.display = "none";
+        }, 4000);
+    });
+}
+
+form.addEventListener("submit", handleSubmit);

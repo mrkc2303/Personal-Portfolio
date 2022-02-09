@@ -541,6 +541,25 @@ body {
 
 
 
+/**********CONTACT ME**********/
+
+.contactMe-content h3 {
+	margin: 2rem 0 3rem 0;
+}
+
+.contactMe-content form {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-input {
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	color: var(--primaryText);
+}
+
+
 /**********BACK TO TOP**********/
 
 .back-to-top {

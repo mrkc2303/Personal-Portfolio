@@ -18,13 +18,13 @@
 			<span class="last-name">Chhabra</span>
 		</a>
 		<ul class="menu">
-			<li><a href="#home" class="home selected">Home</a></li>
-			<li><a href="#about" class="about">About</a></li>
-			<li><a href="#skills" class="skills">Skills</a></li>
-			<li><a href="#qualifications" class="qualifications">Qualifications</a></li>
-			<li><a href="./certificates.html" class="certificates">Certificates</a></li>
-			<li><a href="#projects" class="projects">Project</a></li>
-			<li><a href="#contactMe" class="contactme">Contact Me</a></li>
+			<li><a href="#home" class="home head-option selected">Home</a></li>
+			<li><a href="#about" class="about head-option">About</a></li>
+			<li><a href="#skills" class="skills head-option">Skills</a></li>
+			<li><a href="#qualifications" class="qualifications head-option">Qualifications</a></li>
+			<li><a href="./certificates.html" class="certificates head-option">Certificates</a></li>
+			<li><a href="#projects" class="projects head-option">Project</a></li>
+			<li><a href="#contactMe" class="contactme head-option">Contact Me</a></li>
 			<span class="material-icons-outlined dark_mode">dark_mode</span>
 			<span class="material-icons-outlined light_mode hide">light_mode</span>
 		</ul>
@@ -400,7 +400,37 @@
 	</div>
 
 	<div id="contactMe" class="section">
-		
+		<div class="intro">
+			<h2>Contact Me</h2>
+			<span>Speak to me if you have any questions.</span>
+		</div>
+		<div class="contactMe-content">
+		<h3>Say Hi to Me</h3>
+			<form id="contact-form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayvekvn" method="POST">
+				<div id="message" class="msg_style"></div>
+				<div class="contact-input">
+					<label for="full-name">Full Name</label>
+					<input type="text" name="name" id="full-name" required>
+				</div>
+				
+				<div class="contact-input">
+					<label for="email-address">Email Address</label>
+					<input type="email" name="_replyto" id="email-address" placeholder="youremail@domain.com" required>
+				</div>
+				
+				<div class="contact-input">
+					<label for="full-name">Subject</label>
+					<input type="text" name="_subject" id="email-subject" required>
+				</div>
+				
+				<div class="contact-input">
+					<label for="message">Message</label>
+					<textarea rows="7" name="message" id="message" placeholder="Write your Message Here" required></textarea>		
+				</div>
+
+				<input type="submit" value="Submit">
+			</form>
+		</div>
 	</div>
 
 <!-- 	<footer>
