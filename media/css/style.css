@@ -10,6 +10,7 @@
 	--primaryWhite: #FFFFFF;
 	--btnHover: #5A43CB;
 	--footer: #6E57E0;
+	--input: #F0EEFC;
 
 	font-family:'Poppins', sans-serif;
 
@@ -30,6 +31,8 @@
 	--primaryWhite: #FFFFFF;
 	--btnHover: #5A43CB;
 	--footer: #100E1B;
+	--input: #211D34;
+	
 
 	font-family:'Poppins', sans-serif;
 
@@ -38,6 +41,16 @@
 	--h2FontSize: 2rem;
 	--h3FontSize: 1.5rem;
 	--h4FontSize: 1.3rem;
+}
+
+/*********CODE FOR CHROME AUTO COLOR CHANGE**********/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--input) inset !important;
+    -webkit-text-fill-color: var(--primaryText) !important;
 }
 
 /**********SCROLLBAR**********/
@@ -137,7 +150,6 @@ body {
 	justify-content: center;
 	width: fit-content;
 	gap: 0.5rem;
-
 }
 
 .iconify {
@@ -557,8 +569,36 @@ body {
 	flex-direction: column;
 	padding: 15px;
 	color: var(--primaryText);
+	background-color: var(--input);
+	margin-bottom: 1.5rem;
+	border-radius: 0.8rem;
 }
 
+.contact-input:nth-child(2) {
+	margin-left: 1.5rem;
+}
+
+.contact-grid {
+	display: flex;
+}
+
+input, textarea, button {
+	border-radius: 0;
+	border: none;
+	background-color: transparent;
+	font-size: 1.1rem;
+	color: var(--primaryText);
+}
+
+input:focus, textarea:focus {
+  	background-color: -var(background-color);
+  	outline: none;
+  	border: none;
+}
+
+button {
+	width: fit-content;
+}
 
 /**********BACK TO TOP**********/
 

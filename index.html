@@ -408,16 +408,18 @@
 		<h3>Say Hi to Me</h3>
 			<form id="contact-form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayvekvn" method="POST">
 				<div id="message" class="msg_style"></div>
-				<div class="contact-input">
-					<label for="full-name">Full Name</label>
-					<input type="text" name="name" id="full-name" required>
+				<div class="contact-grid">
+					<div class="contact-input">
+						<label for="full-name">Full Name</label>
+						<input type="text" name="name" id="full-name" required>
+					</div>
+					
+					<div class="contact-input">
+						<label for="email-address">Email Address</label>
+						<input type="email" name="_replyto" id="email-address" placeholder="youremail@domain.com" required>
+					</div>
 				</div>
-				
-				<div class="contact-input">
-					<label for="email-address">Email Address</label>
-					<input type="email" name="_replyto" id="email-address" placeholder="youremail@domain.com" required>
-				</div>
-				
+
 				<div class="contact-input">
 					<label for="full-name">Subject</label>
 					<input type="text" name="_subject" id="email-subject" required>
@@ -425,10 +427,14 @@
 				
 				<div class="contact-input">
 					<label for="message">Message</label>
-					<textarea rows="7" name="message" id="message" placeholder="Write your Message Here" required></textarea>		
+					<textarea rows="7" col="0" name="message" id="message" placeholder="Write your Message Here" required></textarea>		
 				</div>
 
-				<input type="submit" value="Submit">
+				<button type="submit" value="Send" class="button button-flex">
+					Send
+					<span class="iconify" data-icon="akar-icons:send"></span>
+				</button>
+				
 			</form>
 		</div>
 	</div>
