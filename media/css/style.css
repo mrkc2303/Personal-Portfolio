@@ -199,8 +199,8 @@ body {
 	top: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	max-width: 85%;
+	justify-content: space-between;
+	width: 85%;
 	background-color: var(--backgroundClr);
 	height: var(--headHeight);
 }
@@ -225,19 +225,19 @@ body {
 }
 
 .last-name {
-	margin-right: 300px;
+	margin-right: auto;
 	color: var(--primaryText);
 }
 
 .first-name:hover {
 	animation-name: text-change1;
-  	animation-duration: 1s;
+  	animation-duration: 0.5s;
   	animation-timing-function: ease;
 }
 
 .last-name:hover {
 	animation-name: text-change2;
-  	animation-duration: 1s;
+  	animation-duration: 0.5s;
   	animation-timing-function: ease;
 }
 
