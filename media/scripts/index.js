@@ -119,6 +119,7 @@ const qualificationToggle = document.querySelectorAll(".toggle-qual");
 const educationSection = document.getElementById("education");
 const workSection = document.getElementById("work");
 const achivementsSection = document.getElementById("achivements");
+const publicationSection = document.getElementById("publications");
 // var qualificationContent = new Array(educationSection, workSection, achivementsSection);
 var qualSelector=document.querySelector(".toggle-qual");
 var qualContent=educationSection;
@@ -148,6 +149,15 @@ qualificationToggle[2].addEventListener("click", function() {
 	qualContent.classList.add("hide");
 	achivementsSection.classList.remove("hide");
 	qualContent = achivementsSection;
+});
+
+qualificationToggle[3].addEventListener("click", function() {
+	qualSelector.classList.remove("selected");
+	this.classList.add("selected");
+	qualSelector=this;
+	qualContent.classList.add("hide");
+	publicationSection.classList.remove("hide");
+	qualContent = publicationSection;
 });
 
 
