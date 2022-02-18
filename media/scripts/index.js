@@ -155,7 +155,7 @@ const form = document.getElementById("contact-form");
 
 async function handleSubmit(event) {
 	event.preventDefault();
-	var message = document.getElementById("message");
+	var message = document.getElementById("text-message");
 	var data = new FormData(event.target);
 	fetch(event.target.action, {
 	    method: form.method,
