@@ -203,6 +203,7 @@ body {
 	width: 85%;
 	background-color: var(--backgroundClr);
 	height: var(--headHeight);
+	z-index: 10;
 }
 
 .home, .about, .skills, .qualifications, .certificates, .projects, .contactme {
@@ -579,6 +580,96 @@ body {
 	width: 80%;
 	background-color: var(--secondaryBackgroundClr);
 	margin: 3rem;
+}
+
+#education, #work, #achivements {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timeline-section {
+    /* background-color: #24292d; */
+    /* min-height: 100vh; */
+    padding: 50px 15px;
+    width: 50%;
+}
+
+.timeline-items {
+    max-width: 100%;
+    /* margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--btns);
+    left: calc(50%);
+}
+
+.timeline-item {
+    margin-bottom: 10px;
+    width: 80%;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 1rem);
+    text-align: right;
+
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 1rem);
+}
+
+.timeline-dot {
+    height: 16px;
+    width: 16px;
+    background-color: var(--btns);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 1.5rem;
+    color: var(--secondaryText);
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    /* width: 50%; */
+    background-color: var(--secondaryBackgroundClr);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: text;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0.01rem;
+    color: var(--primaryText);
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+    letter-spacing: 0.01rem;
 }
 
 /**********CONTACT ME**********/
