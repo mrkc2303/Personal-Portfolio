@@ -272,8 +272,7 @@ body {
 #home {
 	flex-direction: row;
 	color: var(--primaryText);
-	max-width: 60%;
-
+	max-width: 75%;
 }
 
 .typing-effect {
@@ -550,6 +549,7 @@ body {
 
 
 /**********QUALIFICATIONS**********/
+
 
 
 
