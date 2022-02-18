@@ -264,7 +264,7 @@ body {
 }
 
 .selected {
-	color: var(--selectText);
+	color: var(--selectText) !important;
 }
 
 /**********HOME**********/
@@ -550,8 +550,36 @@ body {
 
 /**********QUALIFICATIONS**********/
 
+.qualifications-menu {
+	display: flex;
+	column-gap: 2rem;
+}
 
+.qualifications-menu div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2%;
+	color: var(--secondaryText);
+	cursor: pointer;
+}
 
+.qualifications-menu h4 {
+	color: inherit;
+}
+
+.qualifications-menu .iconify {
+	margin: 0 5px 0 0;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.content-qual {
+	height: 10rem;
+	width: 80%;
+	background-color: var(--secondaryBackgroundClr);
+	margin: 3rem;
+}
 
 /**********CONTACT ME**********/
 

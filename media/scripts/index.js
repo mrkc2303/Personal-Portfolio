@@ -98,6 +98,8 @@ window.addEventListener("scroll", function() {
 const cardHead = document.querySelectorAll(".cardHead");
 
 for (var i = 0; i < cardHead.length; i++) {	
+
+
 	cardHead[i].addEventListener("click", function() {
 		console.log(this);
 		var content = this.nextElementSibling;
@@ -112,6 +114,41 @@ for (var i = 0; i < cardHead.length; i++) {
 	    } 
 	});
 }
+
+const qualificationToggle = document.querySelectorAll(".toggle-qual");
+const educationSection = document.getElementById("education");
+const workSection = document.getElementById("work");
+const achivementsSection = document.getElementById("achivements");
+// var qualificationContent = new Array(educationSection, workSection, achivementsSection);
+var qualSelector=document.querySelector(".toggle-qual");
+var qualContent=educationSection;
+
+qualificationToggle[0].addEventListener("click", function() {
+	qualSelector.classList.remove("selected");
+	this.classList.add("selected");
+	qualSelector=this;
+	qualContent.classList.add("hide");
+	educationSection.classList.remove("hide");
+	qualContent = educationSection;
+});
+
+qualificationToggle[1].addEventListener("click", function() {
+	qualSelector.classList.remove("selected");
+	this.classList.add("selected");
+	qualSelector=this;
+	qualContent.classList.add("hide");
+	workSection.classList.remove("hide");
+	qualContent = workSection;
+});
+
+qualificationToggle[2].addEventListener("click", function() {
+	qualSelector.classList.remove("selected");
+	this.classList.add("selected");
+	qualSelector=this;
+	qualContent.classList.add("hide");
+	achivementsSection.classList.remove("hide");
+	qualContent = achivementsSection;
+});
 
 
 const form = document.getElementById("contact-form");
