@@ -78,7 +78,7 @@ html::-webkit-scrollbar-thumb:hover {
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-	user-select: none;
+	/*user-select: none;*/
 	scrollbar-width: thin;
 	scrollbar-color: #6E57E0 #f1f1f1;
 }
@@ -553,6 +553,8 @@ body {
 .qualifications-menu {
 	display: flex;
 	column-gap: 2rem;
+	width: 80%;
+	justify-content: center;
 }
 
 .qualifications-menu div {
@@ -582,6 +584,7 @@ body {
 }
 
 #education, #work, #achivements, #publications  {
+	width: fit-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -624,7 +627,6 @@ body {
 .timeline-item:nth-child(odd) {
     padding-right: calc(50% + 1rem);
     text-align: right;
-
 }
 
 .timeline-item:nth-child(even) {
