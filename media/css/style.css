@@ -185,7 +185,7 @@ body {
 } 
 
 .content {
-	max-width: 70%;
+	max-width: 100%;
 	display: flex;
 	justify-content: center;
 }
@@ -380,7 +380,7 @@ body {
 /**********ABOUT ME**********/
 
 #about {
-	
+	max-width: 75%;
 }
 
 .intro {
@@ -403,7 +403,7 @@ body {
 }
 
 .about-info {
-	max-width: 30%;
+	max-width: 40%;
 	color: var(--secondaryText);
 	display: flex;
 	flex-direction: column;
@@ -435,7 +435,7 @@ body {
 /**********SKILLS SECTION**********/
 
 #skills {
-	max-width: 80%;
+	max-width: 75%;
 }
 
 .skills-main {
@@ -789,13 +789,18 @@ button {
 
 /**********FOOTER**********/
 
-/*footer {
+footer {
+	margin-top: 8rem;
 	background-color: var(--footer);
 	height: 250px;
 	width: 100%;
-	margin-top:auto; 
 	color: var(--primaryWhite);
-}*/
+}
+
+.foot-content {
+	max-width: 80%;
+	display: grid;
+}
 
 /**********MEDIA QUERIES**********/
 
