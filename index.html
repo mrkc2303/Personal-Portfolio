@@ -593,38 +593,74 @@
 			<h2>Contact Me</h2>
 			<span>Speak to me if you have any questions.</span>
 		</div>
-		<div class="contactMe-content">
-		<h3>Say Hi to Me</h3>
-			<form id="contact-form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayvekvn" method="POST">
-				<div id="text-message" class="msg_style"></div>
-				<div class="contact-grid">
+		<div class="contact-container">
+			<div class=contact-social>
+				<a href="https://goo.gl/maps/kaCB85f1GqqRe3sE7" class="social-link" target="_blank">
+					<span class="iconify" data-icon="akar-icons:location"></span>
+					<div>
+						<h4 class="social-text">Location</h4>
+						<span class="social-subtext">New Delhi, India</span>
+					</div>
+				</a>
+
+				<a href="mailto:kanishkchhabra23@gmail.com" class="social-link" target="_blank">
+					<span class="iconify" data-icon="carbon:email"></span>
+					<div>
+						<h4 class="social-text">Email</h4>
+						<span class="social-subtext">kanishkchhabra23@gmail.com</span>
+					</div>
+				</a>
+
+				<a href="https://calendly.com/mrkc2303" class="social-link" target="_blank">
+					<span class="iconify" data-icon="uil:calender"></span>
+					<div>
+						<h4 class="social-text">Online Meet</h4>
+						<span class="social-subtext">Schedule an Online Meet with Me</span>
+					</div>
+				</a>
+
+				<a href="https://www.linkedin.com/in/kanishk-chhabra/" class="social-link" target="_blank">
+					<span class="iconify social-icon" data-icon="uil:linkedin-alt"></span>
+					<div>
+						<h4 class="social-text">Linkedin</h4>
+						<span class="social-subtext">@kanishk-chhabra</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="contactMe-content">
+				<h3>Say Hi to Me</h3>
+				<form id="contact-form" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayvekvn" method="POST">
+					<div id="text-message" class="msg_style"></div>
+					<div class="contact-grid">
+						<div class="contact-input">
+							<label for="full-name">Full Name</label>
+							<input type="text" name="name" id="full-name" required>
+						</div>
+						
+						<div class="contact-input">
+							<label for="email-address">Email Address</label>
+							<input type="email" name="_replyto" id="email-address" placeholder="youremail@domain.com" required>
+						</div>
+					</div>
+
 					<div class="contact-input">
-						<label for="full-name">Full Name</label>
-						<input type="text" name="name" id="full-name" required>
+						<label for="full-name">Subject</label>
+						<input type="text" name="_subject" id="email-subject" required>
 					</div>
 					
 					<div class="contact-input">
-						<label for="email-address">Email Address</label>
-						<input type="email" name="_replyto" id="email-address" placeholder="youremail@domain.com" required>
+						<label for="message">Message</label>
+						<textarea rows="7" col="0" name="message" id="message" placeholder="Write your Message Here" required></textarea>		
 					</div>
-				</div>
 
-				<div class="contact-input">
-					<label for="full-name">Subject</label>
-					<input type="text" name="_subject" id="email-subject" required>
-				</div>
-				
-				<div class="contact-input">
-					<label for="message">Message</label>
-					<textarea rows="7" col="0" name="message" id="message" placeholder="Write your Message Here" required></textarea>		
-				</div>
-
-				<button type="submit" value="Send" class="button button-flex">
-					Send
-					<span class="iconify" data-icon="akar-icons:send"></span>
-				</button>
-				
-			</form>
+					<button type="submit" value="Send" class="button button-flex">
+						Send
+						<span class="iconify" data-icon="akar-icons:send"></span>
+					</button>
+					
+				</form>
+			</div>
 		</div>
 	</div>
 
