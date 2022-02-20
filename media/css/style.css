@@ -15,6 +15,7 @@
 	font-family:'Poppins', sans-serif;
 
 	--headHeight: 3rem;
+	--footerHeight: 12rem;
 	--h1FontSize: 2.5rem;
 	--h2FontSize: 2rem;
 	--h3FontSize: 1.5rem;
@@ -37,6 +38,7 @@
 	font-family:'Poppins', sans-serif;
 
 	--headHeight: 3rem;
+	--footerHeight: 12rem;
 	--h1FontSize: 2.5rem;
 	--h2FontSize: 2rem;
 	--h3FontSize: 1.5rem;
@@ -121,6 +123,10 @@ body {
 	background-color: var(--backgroundClr);
 	margin: 0;
   	padding: 0;
+}
+
+button {
+	cursor: pointer;
 }
 
 /**********GENERAL**********/
@@ -283,6 +289,7 @@ body {
 .homeBlob {
 	height: 25em;
 	width: 25em;
+	z-index: -3;
 }
 
 .homeBlob path {
@@ -801,13 +808,15 @@ button {
 footer {
 	margin-top: 8rem;
 	background-color: var(--footer);
-	height: 250px;
+	height: var(--footerHeight);
 	width: 100%;
 	color: var(--primaryWhite) !important;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	position: relative;
+	bottom: 0;
 }
 
 footer div:nth-child(2) {
@@ -844,6 +853,39 @@ footer div:nth-child(2) {
 	width: 1.5rem;
 	color: var(--primaryWhite);
 	margin-right: 1rem;
+}
+
+/**********CERTIFICATES PAGE**********/
+
+#certificates-page {
+	width: 100%;
+	padding-top: 10rem;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#certificates-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	width: 80%;
+	grid-gap: 2rem;
+}
+
+.certificate {
+	height: auto;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border: var(--btns) solid 2px;
+	border-radius: 1rem;
+	color: var(--primaryText);
+}
+
+.certificate:hover {
+	box-shadow: 4px 2px 5px var(--btns);
 }
 
 /**********MEDIA QUERIES**********/

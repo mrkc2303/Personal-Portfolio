@@ -55,17 +55,6 @@ for(var i=0; i < headOption.length; i++) {
 	});
 }
 
-const typed = new Typed('.type', {
-	strings: ['a Web Developer.', 'an Android Developer.', 'a C++ Programmer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
-  	smartBackspace: true,
-  	startDelay: 1000,
-  	typeSpeed: 50,
-  	backDelay: 1000,
-  	backSpeed: 40,
-  	loop: true,
-  });
-
-
 //SCROLL SECTIONS
 
 const sections = Array.prototype.slice.call(document.querySelectorAll(".section"));
@@ -73,10 +62,9 @@ const footer = document.querySelector("#footer");
 
 window.addEventListener("scroll", function() {
 	const scrollY = window.pageYOffset;
-
 		sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop-50;
+		const sectionTop = current.offsetTop;
 		let sectionId = current.getAttribute("id");
 		
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -95,10 +83,29 @@ window.addEventListener("scroll", function() {
 	});
 });
 
+
+if(window.location.pathname == "/certificates.html") {
+	currSelected.classList.remove("selected");
+	certificatesBtn.classList.add("selected");
+	currSelected = certificatesBtn;
+	document.querySelector(".fixed-social").classList.add("fixed-social-show");
+} 
+
+//CODE SPECIFIC FOR INDEX.HTML
+
+const typed = new Typed('.type', {
+	strings: ['a Web Developer.', 'an Android Developer.', 'a C++ Programmer.', 'a Space Enthusiast.', 'a Speed Cuber.', 'a Gamer.'],
+  	smartBackspace: true,
+  	startDelay: 1000,
+  	typeSpeed: 50,
+  	backDelay: 1000,
+  	backSpeed: 40,
+  	loop: true,
+  });
+
 const cardHead = document.querySelectorAll(".cardHead");
 
 for (var i = 0; i < cardHead.length; i++) {	
-
 
 	cardHead[i].addEventListener("click", function() {
 		console.log(this);
