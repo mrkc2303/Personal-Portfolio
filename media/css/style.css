@@ -315,7 +315,7 @@ button {
 .social-home {
 	display: flex;
 	flex-direction: column;
-	height: 12em;
+	height: 18rem;
 	justify-content: space-between;
 	margin-left: 5em;
 }
@@ -502,6 +502,7 @@ button {
 	max-height: 0;
   	overflow: hidden;
   	transition: max-height 0.5s ease-out;
+  	border-radius: 1rem;
 }
 
 .section-specs {
