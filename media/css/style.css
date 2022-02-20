@@ -810,6 +810,10 @@ footer {
 	align-items: center;
 }
 
+footer div:nth-child(2) {
+	font-size: 0.8rem;
+}
+
 .foot-content {
 	max-width: 80%;
 	display: grid;
