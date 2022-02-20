@@ -66,19 +66,19 @@ const typed = new Typed('.type', {
   });
 
 
-//SCROLL SECTIONS (TODO)
+//SCROLL SECTIONS
 
-const sections = document.querySelectorAll(".section");
-// console.log(sections); 
+const sections = Array.prototype.slice.call(document.querySelectorAll(".section"));
+const footer = document.querySelector("#footer");
 
 window.addEventListener("scroll", function() {
 	const scrollY = window.pageYOffset;
 
-	sections.forEach((current) => {
+		sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight;
 		const sectionTop = current.offsetTop-50;
 		let sectionId = current.getAttribute("id");
-
+		
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
 			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected")
 

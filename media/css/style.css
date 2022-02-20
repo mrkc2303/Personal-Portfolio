@@ -786,6 +786,15 @@ button {
 	bottom: 5rem;
 }
 
+.reverseClr {
+	color: var(--btns);
+	background-color: var(--primaryWhite);
+}
+
+.reverseClr .iconify {
+	color: var(--btns);
+}
+
 
 /**********FOOTER**********/
 
@@ -794,12 +803,43 @@ footer {
 	background-color: var(--footer);
 	height: 250px;
 	width: 100%;
-	color: var(--primaryWhite);
+	color: var(--primaryWhite) !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .foot-content {
 	max-width: 80%;
 	display: grid;
+	grid-gap: 3rem;
+	grid-template-columns: repeat(2, 1fr);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.foot-content h2 {
+	color: var(--primaryWhite);
+}
+
+.foot-content div {
+	display: flex;
+}
+
+.foot-content div:nth-child(odd) {
+	flex-direction: column;
+}
+
+.foot-content div:nth-child(even) {
+	justify-content: center;
+}
+
+.foot-content .iconify {
+	height: 1.5rem;
+	width: 1.5rem;
+	color: var(--primaryWhite);
+	margin-right: 1rem;
 }
 
 /**********MEDIA QUERIES**********/
