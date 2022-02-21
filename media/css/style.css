@@ -883,6 +883,7 @@ footer div:nth-child(2) {
 	width: auto;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	padding: 10px;
 	border: var(--btns) solid 2px;
 	border-radius: 1rem;
@@ -891,6 +892,24 @@ footer div:nth-child(2) {
 
 .certificate:hover {
 	box-shadow: 4px 2px 5px var(--btns);
+}
+
+.certificate span, .certificate a {
+	margin-top: 1rem;
+}
+
+.certificate div {
+	display: flex;
+	flex-direction: column;
+}
+
+.certificate span:nth-child(3) {
+	font-size: 0.8rem;
+	color: var(--secondaryText);
+}
+
+.certificate a {
+	align-self: center;	
 }
 
 /**********MEDIA QUERIES**********/
