@@ -185,6 +185,7 @@ async function handleSubmit(event) {
     .then((response) => {
 	    message.innerHTML = "Your message has been sent.";
 	    document.querySelector(".msg_style").style.display = "block";
+	    document.querySelector(".msg_style").style.color = "green";
 
 	    setTimeout(function () {
 	      document.querySelector(".msg_style").style.display = "none";
@@ -195,6 +196,7 @@ async function handleSubmit(event) {
         message.innerHTML =
           "Oops! There was a problem delivering your message, please contact via other means.";
         document.querySelector(".msg_style").style.display = "block";
+        document.querySelector(".msg_style").style.color = "red";
 
         setTimeout(function () {
           document.querySelector(".msg_style").style.display = "none";

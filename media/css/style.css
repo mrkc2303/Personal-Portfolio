@@ -803,6 +803,10 @@ button {
 	color: var(--btns);
 }
 
+.msg_style {
+	margin-bottom: 1rem;
+}
+
 
 /**********FOOTER**********/
 
