@@ -85,9 +85,6 @@ window.addEventListener("scroll", function() {
 
 
 if(window.location.pathname == "/certificates.html") {
-	currSelected.classList.remove("selected");
-	certificatesBtn.classList.add("selected");
-	currSelected = certificatesBtn;
 	document.querySelector(".fixed-social").classList.add("fixed-social-show");
 } 
 
