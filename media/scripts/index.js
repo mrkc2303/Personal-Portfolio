@@ -173,6 +173,7 @@ for(var i=0; i < projectsToggle.length; i++) {
 		projectSelect.classList.remove("selected");
 		this.classList.add("selected");
 		projectSelect=this;
+		console.log(projectSelect);
 	});
 }
 

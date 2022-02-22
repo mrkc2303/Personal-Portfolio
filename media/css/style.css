@@ -746,7 +746,11 @@ button {
 .slide video {
 	width: 50%;
 	border-radius: 0.5rem;
-	height: fit-content;
+	height: 100%;
+}
+
+.slide img {
+	width: 50%;
 }
 
 .numbertext {
@@ -800,6 +804,10 @@ button {
 
 .active-dot, .dot:hover {
 	background-color: var(--btns);
+}
+
+.android {
+	height: 400px !important;
 }
 
 /**********CONTACT ME**********/
