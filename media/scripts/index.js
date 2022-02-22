@@ -165,6 +165,61 @@ qualificationToggle[3].addEventListener("click", function() {
 });
 
 
+const projectsToggle = document.querySelectorAll(".toggle-projects");
+var projectSelect = projectsToggle[0];
+
+for(var i=0; i < projectsToggle.length; i++) {
+	projectsToggle[i].addEventListener("click", function() {
+		projectSelect.classList.remove("selected");
+		this.classList.add("selected");
+		projectSelect=this;
+	});
+}
+
+
+var numberText = document.querySelectorAll(".numbertext");
+var slides = document.querySelectorAll(".slide");
+var dots = document.querySelectorAll(".dot");
+
+for(var i=0; i < numberText.length; i++) {
+	numberText[i].innerHTML = i+1 + " / " + numberText.length;
+}
+
+document.querySelector(".prev").addEventListener("click", function() {
+	plusSlides(-1);
+});
+
+document.querySelector(".next").addEventListener("click", function() {
+	plusSlides(1);
+});
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+	var i;
+	if (n > slides.length) {slideIndex = 1}    
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";  
+	}
+	for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active-dot", "");
+	}
+	slides[slideIndex-1].style.display = "flex";  
+	dots[slideIndex-1].className += " active-dot";
+}
+
+
+
 const form = document.getElementById("contact-form");
 
 async function handleSubmit(event) {
