@@ -175,14 +175,14 @@ for(var i=0; i < projectsToggle.length; i++) {
 		this.classList.add("selected");
 		projectSelect=this;
 		if(this.getAttribute("id") == "android-apps") {
-			skip = [0, 1, 2, 3, 4, 5, 6, 7, 12];
-			currentSlide(9);
+			skip = [0, 1, 2, 3, 4, 5, 6, 11, 12];
+			currentSlide(8);
 		} else if(this.getAttribute("id") == "web-apps") {
-			skip = [8, 9, 10, 11, 12];
+			skip = [7, 8, 9, 10, 11, 12];
 			currentSlide(1);
 		} else if(this.getAttribute("id") == "electronics") {
-			skip = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-			currentSlide(13);
+			skip = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			currentSlide(12);
 		} else {
 			skip = [];
 			currentSlide(1);
@@ -221,6 +221,27 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
+	if(projectSelect != projectsToggle[0]) {
+		if (n+slideIndex > slides.length) {slideIndex = 0} 
+		if(slideIndex + n >= 1 && slideIndex + n <= 7) {
+			skip = [7, 8, 9, 10, 11, 12];
+			projectSelect.classList.remove("selected");
+			projectsToggle[1].classList.add("selected");
+			projectSelect=projectsToggle[1];
+		} else if(slideIndex + n >= 8 && slideIndex + n <= 11) {
+			skip = [0, 1, 2, 3, 4, 5, 6, 11, 12];
+			projectSelect.classList.remove("selected");
+			projectsToggle[2].classList.add("selected");
+			projectSelect=projectsToggle[2];
+		} else {
+			skip = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+			projectSelect.classList.remove("selected");
+			projectsToggle[3].classList.add("selected");
+			projectSelect=projectsToggle[3];
+		}
+		executeHide();
+	}
+	
 	showSlides(slideIndex += n);
 }
 
