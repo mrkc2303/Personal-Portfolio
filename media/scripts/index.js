@@ -167,13 +167,27 @@ qualificationToggle[3].addEventListener("click", function() {
 
 const projectsToggle = document.querySelectorAll(".toggle-projects");
 var projectSelect = projectsToggle[0];
+var skip = [];
 
 for(var i=0; i < projectsToggle.length; i++) {
 	projectsToggle[i].addEventListener("click", function() {
 		projectSelect.classList.remove("selected");
 		this.classList.add("selected");
 		projectSelect=this;
-		console.log(projectSelect);
+		if(this.getAttribute("id") == "android-apps") {
+			skip = [0, 1, 2, 3, 4, 5, 6, 7, 12];
+			currentSlide(9);
+		} else if(this.getAttribute("id") == "web-apps") {
+			skip = [8, 9, 10, 11, 12];
+			currentSlide(1);
+		} else if(this.getAttribute("id") == "electronics") {
+			skip = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+			currentSlide(13);
+		} else {
+			skip = [];
+			currentSlide(1);
+		}
+		executeHide();	
 	});
 }
 
@@ -182,7 +196,16 @@ var numberText = document.querySelectorAll(".numbertext");
 var slides = document.querySelectorAll(".slide");
 var dots = document.querySelectorAll(".dot");
 
-for(var i=0; i < numberText.length; i++) {
+const executeHide = () => {
+	for(var i=0; i < dots.length; i++) {
+		dots[i].classList.remove("hide-dot");
+	}
+	for(var i=0; i < skip.length; i++) {
+		dots[skip[i]].classList.add("hide-dot");
+	}
+}
+
+for(var i=0; i < (numberText.length - skip.length); i++) {
 	numberText[i].innerHTML = i+1 + " / " + numberText.length;
 }
 
@@ -209,11 +232,12 @@ function showSlides(n) {
 	var i;
 	if (n > slides.length) {slideIndex = 1}    
 	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
+	/*for (i = 0; i < slides.length; i++) {
 	    slides[i].style.display = "none";  
-	}
+	}*/
 	for (i = 0; i < dots.length; i++) {
 	    dots[i].className = dots[i].className.replace(" active-dot", "");
+	    slides[i].style.display = "none";
 	}
 	slides[slideIndex-1].style.display = "flex";  
 	dots[slideIndex-1].className += " active-dot";

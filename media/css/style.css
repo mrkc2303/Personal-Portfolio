@@ -789,6 +789,10 @@ button {
 
 .dot-container {
 	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
 }
 
 .dot {
@@ -808,6 +812,13 @@ button {
 
 .android {
 	height: 400px !important;
+}
+
+.hide-dot {
+	display: none;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
 }
 
 /**********CONTACT ME**********/
