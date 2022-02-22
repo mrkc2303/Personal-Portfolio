@@ -903,9 +903,15 @@ footer div:nth-child(2) {
 	flex-direction: column;
 }
 
-.certificate span:nth-child(3) {
+.certificate ul {
 	font-size: 0.8rem;
 	color: var(--secondaryText);
+	padding-left: 1rem;
+}
+
+.certificate ul li {
+	list-style-type: circle;
+	margin-bottom: 10px	;
 }
 
 .certificate a {
