@@ -20,6 +20,8 @@
 	--h2FontSize: 2rem;
 	--h3FontSize: 1.5rem;
 	--h4FontSize: 1.3rem;
+	--normalSize: 1rem;
+	--smallSize: 0.85rem;
 }
 
 [data-theme="dark"] {
@@ -33,16 +35,6 @@
 	--btnHover: #5A43CB;
 	--footer: #100E1B;
 	--input: #211D34;
-	
-
-	font-family:'Poppins', sans-serif;
-
-	--headHeight: 3rem;
-	--footerHeight: 12rem;
-	--h1FontSize: 2.5rem;
-	--h2FontSize: 2rem;
-	--h3FontSize: 1.5rem;
-	--h4FontSize: 1.3rem;
 }
 
 /*********CODE FOR CHROME AUTO COLOR CHANGE**********/
@@ -133,9 +125,10 @@ button {
 
 .button {
 	color: var(--primaryWhite);
-	padding: 16px;
+	padding: var(--normalSize);
 	background-color: var(--btns);
 	border-radius: 0.5rem;
+	font-size: var(--normalSize);
 }
 
 .button:hover {
@@ -146,6 +139,7 @@ button {
 	color: var(--primaryText);
 	padding: 16px;
 	background-color: var(--backgroundClr);
+	font-size: var(--normalSize);
 }
 
 .button-flex {
@@ -156,7 +150,7 @@ button {
 	gap: 0.5rem;
 }
 
-.iconify {
+.iconify, .button .iconify {
 	height: 1.3rem;
 	width: 1.3rem;
 	margin-left: 8px;
@@ -220,7 +214,7 @@ button {
 
 
 .first-name, .last-name {
-	font-size: 1.5rem;
+	font-size: var(--h3FontSize);
 	font-weight: 900;
 	letter-spacing: 3px;
 }
@@ -248,7 +242,7 @@ button {
 
 .header ul {
 	display: flex;
-	font-size: 14px;
+	font-size: var(--smallSize);
 }
 
 .header li {
@@ -256,7 +250,7 @@ button {
 }
 
 .header .material-icons-outlined {
-	font-size: 20px;
+	font-size: var(--h4FontSize);
 	color: var(--primaryText);
 	cursor: pointer;
 	user-select: none;
@@ -306,6 +300,7 @@ button {
 
 .homeIntro {
 	color: var(--secondaryText);
+	font-size: var(--normalSize);
 }
 
 .button .material-icons-outlined {
@@ -1048,7 +1043,59 @@ footer div:nth-child(2) {
 
 /**********MEDIA QUERIES**********/
 
+@media(max-width: 1221px) {
+	:root {
+		--h1FontSize: 2rem;
+		--h2FontSize: 1.5rem;
+		--h3FontSize: 1.2rem;
+		--h4FontSize: 1rem;
+		--normalSize: 0.85rem;
+		--smallSize: 0.75rem;
+	}
+
+	.header li {
+		margin-right: 25px;
+	}
+}
+
+@media(max-width: 1024px) {
+	:root {
+		--h1FontSize: 1.7rem;
+		--h2FontSize: 1.3rem;
+		--h3FontSize: 1rem;
+		--h4FontSize: 0.8rem;
+		--normalSize: 0.75rem;
+		--smallSize: 0.7rem;
+	}
+
+	.social-home {
+		margin-left: 2rem;
+	}
+
+	.homeBlob {
+		height: 20em;
+		width: 20em;
+	}
+}
+
 @media(max-width: 767px) {
+    :root {
+    	--headHeight: 0rem;
+    }
+
+    .header {
+    	display: none;
+    }
+
+    #home { 
+    	padding-top: 3rem;
+    }
+
+	.homeBlob {
+		height: 15em;
+		width: 15em;
+	}
+
     .timeline-items::before {
         left: 7px;
     }
