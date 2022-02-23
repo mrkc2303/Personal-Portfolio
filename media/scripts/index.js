@@ -265,6 +265,19 @@ function showSlides(n) {
 }
 
 
+setInterval(changeimg, 5000);
+
+var currImg=1;
+function changeimg() {
+	if(currImg == 1) {
+		document.querySelector(".echallan-img").setAttribute("src", "./media/files/echallan1.jpeg");
+		currImg=2;
+	} else {
+		document.querySelector(".echallan-img").setAttribute("src", "./media/files/echallan_img.jpeg");
+		currImg=1;
+	}
+}
+
 
 const form = document.getElementById("contact-form");
 
