@@ -249,7 +249,7 @@ button {
 	margin-right: 40px;
 }
 
-.header .material-icons-outlined {
+.header .material-icons-outlined, .bottom-head .material-icons-outlined, .head-menu .material-icons-outlined {
 	font-size: var(--h4FontSize);
 	color: var(--primaryText);
 	cursor: pointer;
@@ -265,6 +265,48 @@ button {
 
 .selected {
 	color: var(--selectText) !important;
+}
+
+.bottom-head, .head-menu {
+	width: 80%;
+	position: fixed;
+	bottom: 0;
+	display: none;
+	flex-direction: row;
+	background-color: var(--backgroundClr);
+}
+
+.bottom-head {
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.head-menu {
+	justify-content: center;
+	align-items: flex-end;
+	background-color: var(--backgroundClr);
+	transition: 0.5s;
+	padding-bottom: 15px;
+}
+
+.bottom-menu {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 80%;
+}
+
+.bottom-menu li {
+	padding: 20px;
+	font-size: var(--normalSize);
+}
+
+.hide-menu {
+	bottom: -50%;
+}
+
+.grid-menu-btn {
+	margin-left: 15px;
 }
 
 /**********HOME**********/
@@ -1085,6 +1127,10 @@ footer div:nth-child(2) {
 
     .header {
     	display: none;
+    }
+
+    .bottom-head, .head-menu {
+    	display: flex;
     }
 
     #home { 

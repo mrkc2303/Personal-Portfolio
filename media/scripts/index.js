@@ -1,25 +1,29 @@
-var darkBtn = document.querySelector(".dark_mode");
-var lightBtn = document.querySelector(".light_mode");
+var darkBtn = document.querySelectorAll(".dark_mode");
+var lightBtn = document.querySelectorAll(".light_mode");
 
 //Dark Theme Switch
 
-darkBtn.addEventListener("click", function() {
-	lightBtn.classList.remove("hide");
-	darkBtn.classList.add("hide");
-	// Changing the theme
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
-});
+for(var i=0; i < 2; i++) {
+	darkBtn[i].addEventListener("click", function() {
+		lightBtn[0].classList.remove("hide");
+		darkBtn[0].classList.add("hide");
+		lightBtn[1].classList.remove("hide");
+		darkBtn[1].classList.add("hide");
+		// Changing the theme
+		document.documentElement.setAttribute('data-theme', 'dark');
+		localStorage.setItem('theme', 'dark');
+	});
 
-//Light Theme Switch
-
-lightBtn.addEventListener("click", function() {
-	darkBtn.classList.remove("hide");
-	lightBtn.classList.add("hide");
-	// Changing the theme
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
-});
+	lightBtn[i].addEventListener("click", function() {
+		darkBtn[0].classList.remove("hide");
+		lightBtn[0].classList.add("hide");
+		darkBtn[1].classList.remove("hide");
+		lightBtn[1].classList.add("hide");
+		// Changing the theme
+		document.documentElement.setAttribute('data-theme', 'light');
+		localStorage.setItem('theme', 'light');
+	});
+}
 
 // CODE STARTED FOR CHECKING PREFERENCES SAVED TO LOCAL STORAGE
 
@@ -33,6 +37,14 @@ if (currentTheme) {
 		darkBtn.classList.add("hide");
     }
 }
+
+document.querySelector(".grid-menu-btn").addEventListener("click", function() {
+	document.querySelector(".head-menu").classList.remove("hide-menu");
+});
+
+document.querySelector(".close-menu-btn").addEventListener("click", function() {
+	document.querySelector(".head-menu").classList.add("hide-menu");
+});
 
 // CODE ENDED FOR CHECKING PREFERENCES SAVED TO LOCAL STORAGE
 
