@@ -29,6 +29,7 @@ for(var i=0; i < 2; i++) {
 
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
+/*
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
@@ -37,6 +38,8 @@ if (currentTheme) {
 		darkBtn.classList.add("hide");
     }
 }
+
+*/
 
 document.querySelector(".grid-menu-btn").addEventListener("click", function() {
 	document.querySelector(".head-menu").classList.remove("hide-menu");
