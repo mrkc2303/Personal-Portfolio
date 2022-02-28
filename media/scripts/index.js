@@ -83,7 +83,7 @@ window.addEventListener("scroll", function() {
 		let sectionId = current.getAttribute("id");
 		
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected")
+			document.querySelector(".menu a[href*=" + sectionId + "]").classList.add("selected");
 
 			if(sectionId != "home") {
 				document.querySelector(".fixed-social").classList.add("fixed-social-show");
