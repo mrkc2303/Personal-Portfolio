@@ -11,7 +11,7 @@ for(var i=0; i < 2; i++) {
 		darkBtn[1].classList.add("hide");
 		// Changing the theme
 		document.documentElement.setAttribute('data-theme', 'dark');
-		localStorage.setItem('theme', 'dark');
+		// localStorage.setItem('theme', 'dark');
 	});
 
 	lightBtn[i].addEventListener("click", function() {
@@ -21,7 +21,7 @@ for(var i=0; i < 2; i++) {
 		lightBtn[1].classList.add("hide");
 		// Changing the theme
 		document.documentElement.setAttribute('data-theme', 'light');
-		localStorage.setItem('theme', 'light');
+		// localStorage.setItem('theme', 'light');
 	});
 }
 
