@@ -32,8 +32,9 @@
   }
 
   #home,
-  #about {
-    max-width: 85%;
+  #about,
+  #projects {
+    width: 85%;
   }
 
   .header {
@@ -66,6 +67,30 @@
 
   .about-info {
     font-size: 0.8rem;
+  }
+
+  .timeline-section {
+    width: 80%;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .slide video {
+    width: 80%;
+    border-radius: 0.5rem;
+    height: 100%;
+  }
+
+  .slide-android {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 2rem;
   }
 }
 
@@ -124,6 +149,13 @@
     height: 13.2rem;
   }
 
+  .skills-main {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 2rem;
+    grid-column-gap: 5rem;
+  }
+
   .timeline-items::before {
     left: 7px;
   }
@@ -140,6 +172,11 @@
 
   .timeline-dot {
     left: 0;
+  }
+
+  .slide-android {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -163,6 +200,15 @@
 
   .about-info {
     width: 90%;
+  }
+
+  .qualifications-menu,
+  .projects-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
+    grid-column: span 2;
+    width: 80%;
   }
 }
 

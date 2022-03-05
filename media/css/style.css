@@ -692,7 +692,7 @@ button {
   /* background-color: #24292d; */
   /* min-height: 100vh; */
   padding: 50px 15px;
-  width: 50%;
+  width: 60%;
 }
 
 .timeline-items {
@@ -824,7 +824,8 @@ button {
 	background-color: rgba(0,0,0,0.8);
 }*/
 
-.slide {
+.slide,
+.slide-android {
   display: flex;
   flex-direction: row;
   align-items: center;
