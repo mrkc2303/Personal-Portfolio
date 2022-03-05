@@ -474,7 +474,10 @@ button {
 }
 
 .about-main {
+  display: flex;
   column-gap: 8rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-info {
@@ -483,6 +486,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 1rem;
   row-gap: 2rem;
 }
 

@@ -31,7 +31,8 @@
     margin-left: 2rem;
   }
 
-  #home {
+  #home,
+  #about {
     max-width: 85%;
   }
 
@@ -52,6 +53,19 @@
   .homeBlob {
     height: 20em;
     width: 20em;
+  }
+
+  .about-img {
+    width: 15rem;
+    height: 16.5rem;
+  }
+
+  .about-main {
+    column-gap: 3rem;
+  }
+
+  .about-info {
+    font-size: 0.8rem;
   }
 }
 
@@ -101,6 +115,15 @@
     display: block;
   }
 
+  .about-info {
+    font-size: 0.7rem;
+  }
+
+  .about-img {
+    width: 12rem;
+    height: 13.2rem;
+  }
+
   .timeline-items::before {
     left: 7px;
   }
@@ -126,4 +149,22 @@
     display: flex;
     flex-direction: column;
   }
+
+  .homeBlob {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-main {
+    /* flex-direction: column-reverse;
+    column-gap: 0;
+    row-gap: 2rem; */
+  }
+
+  .about-info {
+    width: 90%;
+  }
+}
+
+@media (max-width: 481px) {
 }
