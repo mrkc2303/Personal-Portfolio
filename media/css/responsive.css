@@ -155,11 +155,11 @@
     height: auto;
   }
 
-  .about-main {
-    /* flex-direction: column-reverse;
+  /* .about-main {
+    flex-direction: column-reverse;
     column-gap: 0;
-    row-gap: 2rem; */
-  }
+    row-gap: 2rem;
+  } */
 
   .about-info {
     width: 90%;
