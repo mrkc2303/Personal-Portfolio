@@ -35,6 +35,16 @@
     max-width: 85%;
   }
 
+  .header {
+    width: 95%;
+  }
+
+  .name {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+
   .home-content {
     margin-left: 3rem;
   }
@@ -69,7 +79,7 @@
 
   .social-home {
     flex-direction: row;
-    width: 90%;
+    width: 80%;
     grid-column-start: 1;
     grid-column-end: 3;
     margin-left: 0;
@@ -81,6 +91,14 @@
   .homeBlob {
     height: 15em;
     width: 15em;
+  }
+
+  .section {
+    padding-top: 6rem;
+  }
+
+  .name {
+    display: block;
   }
 
   .timeline-items::before {

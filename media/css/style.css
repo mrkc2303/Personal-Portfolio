@@ -232,6 +232,12 @@ button {
   color: var(--selectText);
 }
 
+.name {
+  display: flex;
+  width: auto;
+  gap: 8px;
+}
+
 .first-name,
 .last-name {
   font-size: var(--h3FontSize);
