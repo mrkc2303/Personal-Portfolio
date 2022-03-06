@@ -922,6 +922,7 @@ button {
   display: flex;
   flex-direction: row;
   column-gap: 3rem;
+  justify-content: center;
 }
 
 .contact-social {
@@ -962,6 +963,7 @@ button {
 .contactMe-content form {
   display: flex;
   flex-direction: column;
+  font-size: var(--normalSize);
 }
 
 .contact-input {
@@ -990,6 +992,7 @@ button {
   background-color: transparent;
   font-size: 1.1rem;
   color: var(--primaryText);
+  font-size: var(--normalSize);
 }
 
 input:focus,
