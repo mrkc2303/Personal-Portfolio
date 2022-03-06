@@ -128,6 +128,16 @@ button {
   cursor: pointer;
 }
 
+::-moz-selection {
+  background: rgba(110, 87, 224, 0.5);
+  color: var(--primaryWhite);
+}
+
+::selection {
+  background: rgba(110, 87, 224, 0.5);
+  color: var(--primaryWhite);
+}
+
 /**********GENERAL**********/
 
 .button {
@@ -467,7 +477,7 @@ button {
 
 .intro span {
   margin-top: 5px;
-  font-size: 0.9rem;
+  font-size: var(--smallSize);
   color: var(--secondaryText);
   font-weight: 500;
   width: fit-content;
@@ -557,7 +567,7 @@ button {
 
 .head-caption {
   margin-top: 5px;
-  font-size: 0.9rem;
+  font-size: var(--smallSize);
   color: var(--secondaryText);
 }
 
@@ -847,7 +857,7 @@ button {
 
 .numbertext {
   color: var(--primaryWhite);
-  font-size: 1rem;
+  font-size: var(--normalSize);
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -859,11 +869,18 @@ button {
   display: flex;
   flex-direction: column;
   align-items: space-between;
+  width: 100%;
 }
 
 .slide-info p,
 .slide-info li {
-  font-size: 0.8rem;
+  font-size: var(--smallSize);
+  color: var(--primaryText);
+}
+
+.slide-info span {
+  font-weight: 800;
+  font-size: var(--normalSize);
   color: var(--primaryText);
 }
 
@@ -914,6 +931,13 @@ button {
   visibility: hidden;
   width: 0px;
   height: 0px;
+}
+
+.learn-more {
+  cursor: pointer;
+  font-weight: lighter;
+  color: var(--btns);
+  display: none;
 }
 
 /**********CONTACT ME**********/

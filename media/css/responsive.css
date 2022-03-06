@@ -224,10 +224,15 @@
   .back-to-top {
     right: 1.5em;
   }
+
+  .dot {
+    height: 11px;
+    width: 11px;
+  }
 }
 
 @media (max-width: 600px) {
-  :root {
+  /* :root {
     --h1FontSize: 1.6rem;
     --h2FontSize: 1.2rem;
     --h3FontSize: 0.9rem;
@@ -235,7 +240,7 @@
     --normalSize: 0.7rem;
     --smallSize: 0.6rem;
     --icon-size: 1rem;
-  }
+  } */
 
   #home {
     padding-top: 3rem;
@@ -282,6 +287,27 @@
 
   .back-to-top {
     right: 1em;
+  }
+
+  .slide-info p {
+    display: none;
+  }
+
+  .slide-info span {
+    margin-top: 1.3rem;
+  }
+
+  .learn-more {
+    display: block;
+  }
+
+  .slide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .slide-info p {
+    display: none;
   }
 }
 

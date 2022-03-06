@@ -330,6 +330,21 @@ function changeimg() {
   }
 }
 
+const learnMore = document.querySelectorAll(".learn-more");
+const info = document.querySelectorAll(".slide-info p");
+
+for (var i = 0; i < learnMore.length; i++) {
+  learnMore[i].addEventListener("click", function () {
+    if (this.innerHTML == "Show Less") {
+      this.nextElementSibling.style.display = "none";
+      this.innerHTML = "Learn More";
+    } else {
+      this.nextElementSibling.style.display = "block";
+      this.innerHTML = "Show Less";
+    }
+  });
+}
+
 const form = document.getElementById("contact-form");
 
 async function handleSubmit(event) {
