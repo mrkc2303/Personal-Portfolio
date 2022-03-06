@@ -647,6 +647,7 @@ button {
 .specs-progress span {
   margin-left: 2rem;
   color: var(--primaryText);
+  font-size: var(--h4FontSize);
 }
 
 /**********QUALIFICATIONS**********/

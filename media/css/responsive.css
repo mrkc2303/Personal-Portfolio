@@ -122,6 +122,11 @@
   .back-to-top {
     right: 2em;
   }
+
+  .specs-intro .iconify {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -229,6 +234,11 @@
     height: 11px;
     width: 11px;
   }
+
+  .specs-intro .iconify {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -308,6 +318,11 @@
 
   .slide-info p {
     display: none;
+  }
+
+  .specs-intro .iconify {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
