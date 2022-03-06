@@ -742,7 +742,7 @@ button {
 }
 
 .timeline-date {
-  font-size: 1.5rem;
+  font-size: var(--h3FontSize);
   color: var(--secondaryText);
   margin: 6px 0 15px;
 }
@@ -756,7 +756,7 @@ button {
 }
 
 .timeline-content h3 {
-  font-size: 1.2rem;
+  font-size: var(--h3FontSize);
   letter-spacing: 0.01rem;
   color: var(--primaryText);
   margin: 0 0 10px;
@@ -765,7 +765,7 @@ button {
 }
 
 .timeline-content p {
-  font-size: 0.9rem;
+  font-size: var(--normalSize);
   font-weight: 300;
   line-height: 1.25rem;
   letter-spacing: 0.01rem;
