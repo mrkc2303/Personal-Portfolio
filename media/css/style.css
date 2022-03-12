@@ -1180,7 +1180,7 @@ footer div:nth-child(2) {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: none;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
 }
@@ -1189,7 +1189,7 @@ footer div:nth-child(2) {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .modal-content {

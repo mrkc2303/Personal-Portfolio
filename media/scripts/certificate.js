@@ -16,7 +16,6 @@ function show_certificate(num) {
 
   document.getElementById("myModal").style.display = "block";
   document.getElementById("img01").src = cerificate_links[num];
-  check();
 }
 
 function close_modal() {
