@@ -146,6 +146,7 @@ button {
   background-color: var(--btns);
   border-radius: 0.5rem;
   font-size: var(--normalSize);
+  cursor: pointer;
 }
 
 .button:hover {
@@ -1188,7 +1189,7 @@ footer div:nth-child(2) {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
+  width: auto;
   max-width: 800px;
 }
 

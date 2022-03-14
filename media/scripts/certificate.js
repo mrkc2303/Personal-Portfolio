@@ -22,9 +22,12 @@ function close_modal() {
   document.getElementById("myModal").style.display = "none";
 }
 
-// document.querySelector("#myModal").addEventListener("keyup", function () {
-//   console.log(window.event.keyCode);
-//   if (window.event.keyCode == 27) {
-//     close_modal();
-//   }
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    close_modal();
+  }
+});
+
+// document.querySelector("#myModal").addEventListener("click", () => {
+//   close_modal();
 // });
