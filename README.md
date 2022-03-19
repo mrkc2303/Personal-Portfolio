@@ -15,9 +15,16 @@ Here you will find:-
 
 It also has Dark Mode for people who like the dark side.
 
-# Tech Stack
+## Tech Stack
 * HTML
 * CSS
 * Javascript
 
 Access it <a href = "https://kanishkchhabra.in/">here</a>
+
+## Video: 
+
+https://user-images.githubusercontent.com/67221487/159135906-110d7e78-2f1a-48c2-a60a-ce4eefd6a68b.mp4
+
+## Screenshots: 
+
