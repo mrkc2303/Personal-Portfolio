@@ -132,7 +132,7 @@ if (window.location.pathname == "/certificates.html") {
 
 const typed = new Typed(".type", {
   strings: [
-    "a Web Developer.",
+    "a Full-Stack Web Developer.",
     "an Android Developer.",
     "a C++ Programmer.",
     "a Space Enthusiast.",
