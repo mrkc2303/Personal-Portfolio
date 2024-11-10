@@ -132,12 +132,11 @@ if (window.location.pathname == "/certificates.html") {
 
 const typed = new Typed(".type", {
   strings: [
-    "a Full-Stack Web Developer.",
+    "a Software Engineer",
+    "a Full-Stack Developer.",
+    "a Blockchain Lover.",
     "an Android Developer.",
-    "a C++ Programmer.",
     "a Space Enthusiast.",
-    "a Speed Cuber.",
-    "a Gamer.",
   ],
   smartBackspace: true,
   startDelay: 1000,
