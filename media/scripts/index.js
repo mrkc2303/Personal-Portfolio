@@ -11,7 +11,7 @@ for (var i = 0; i < 2; i++) {
     darkBtn[1].classList.add("hide");
     // Changing the theme
     document.documentElement.setAttribute("data-theme", "dark");
-    // localStorage.setItem('theme', 'dark');
+    localStorage.setItem('theme', 'dark');
   });
 
   lightBtn[i].addEventListener("click", function () {
@@ -21,7 +21,7 @@ for (var i = 0; i < 2; i++) {
     lightBtn[1].classList.add("hide");
     // Changing the theme
     document.documentElement.setAttribute("data-theme", "light");
-    // localStorage.setItem('theme', 'light');
+    localStorage.setItem('theme', 'light');
   });
 }
 
@@ -29,19 +29,23 @@ for (var i = 0; i < 2; i++) {
 
 const currentTheme = localStorage.getItem("theme")
   ? localStorage.getItem("theme")
-  : null;
+  : "dark"; // Default to dark theme
 
-/*
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
     if (currentTheme === 'dark') {
-        lightBtn.classList.remove("hide");
-		darkBtn.classList.add("hide");
+        lightBtn[0].classList.remove("hide");
+        darkBtn[0].classList.add("hide");
+        lightBtn[1].classList.remove("hide");
+        darkBtn[1].classList.add("hide");
+    } else {
+        lightBtn[0].classList.add("hide");
+        darkBtn[0].classList.remove("hide");
+        lightBtn[1].classList.add("hide");
+        darkBtn[1].classList.remove("hide");
     }
 }
-
-*/
 
 document.querySelector(".grid-menu-btn").addEventListener("click", function () {
   document.querySelector(".head-menu").classList.remove("hide-menu");
